@@ -1,0 +1,136 @@
+@import '../../App.scss';
+
+.attractionC{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(209, 206, 206);
+    font-weight: 600;
+    font-size: 14px;
+    gap: 10px;
+
+    @include large{
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    @include medium{
+        font-size: 11px;
+    }
+
+    @include small{
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px 0;
+     }
+
+    .img{
+     width: 250px;
+     height: 100%;   
+     object-fit: contain;
+
+     @include large{
+        width: 150px;
+        height: 100px;
+    }
+
+    @include medium{
+        width: 100px;
+        height: 80px;
+    }
+
+    @include small{
+       width: 150px;
+       height: 100px;
+     }
+    }
+
+    .info{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 10px;
+        gap: 5px;
+
+        @include small{
+            width: 100%;
+         }
+    }
+
+    .termC{
+        height: 100%;
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        @include small{
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+         }
+
+    .term{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+
+        @include small{
+            flex-direction: row; 
+         }
+    }
+}
+
+    .ticekts{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include small{
+            width: 100%;
+            height: auto;   
+            flex-direction: row;
+            justify-content: center;
+         }
+
+        .ticket{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @include small{
+                flex-direction: row;
+             }
+        }
+    }
+
+    .price{
+        height: 50px;
+        width: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 5px;
+
+        @include small{
+            width: 100%;
+            height: auto;
+            flex-direction: row;
+            gap: 10px;
+         }
+
+        span{
+            margin-bottom: 5px;
+        }
+    }
+
+}

@@ -1,0 +1,139 @@
+@import '../../App.scss';
+
+.currencyContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+
+    @include medium{
+        align-items:flex-start;
+    }
+
+    .currencyWrapper{
+        background-color: white;
+        padding: 20px;
+        position: relative;
+        width: 968px;
+        max-height: 90%;
+        z-index: 99;
+        color: black;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include large{
+            max-width: 794px;
+        }
+
+        @include medium{
+            max-width: 570px;
+            top: 150px;
+            padding: 10px;
+        }
+
+        @include small{
+            width: 100%;
+            max-width: 350px;
+            padding: 20px 10px;
+         }
+        
+        span{
+            font-size: 14px;
+
+            @include medium{
+               font-size: 12px;
+            }
+        }
+
+
+        .currencyOptions{
+               display: flex;
+               flex-direction: column;
+               gap: 10px;
+
+            .currencyOption{
+                width: 100%;
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+                padding: 0 20px;
+
+                .currency{
+                    width: 22%;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 5px 10px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: all .2s ease;
+
+                    @include small{
+                        width: 27%;
+                        height: auto;
+                    }
+
+                    .currencyL{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        @include medium{
+                            gap: 5px;
+                        }
+                    }
+
+                    &:hover{
+                        background-color: rgb(226, 226, 226);
+                    }
+                }
+
+                .currencyActive{
+                    width: 22%;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 5px 10px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: all .2s ease;
+                    color: #0071c2;
+                    background-color: #e5f0f8;
+
+                    @include small{
+                        height: auto;
+                        width: 27%;
+                    }
+
+                    .currencyL{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        @include medium{
+                            gap: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .xMarkIcon{
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    }
+}

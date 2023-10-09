@@ -1,0 +1,165 @@
+@import '../../App.scss';
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    
+  .lContainer {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include large{
+      width: 40vw;
+  }
+
+    @include medium{
+      width: 50vw;
+  }
+
+  @include small{
+    width: 60vw;
+ }
+  
+    .lLoginC{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  
+      .lLogin{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+  .lInput{
+    height: 30px;
+    padding: 10px;
+    }
+  }
+}
+
+.lLoginButtonC{
+  width: 100%;
+
+  .lButton {  
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #0071c2;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .lButton:disabled{
+    background-color: #0071c28c;
+    cursor: not-allowed;
+  }
+
+  .lErrorMess{
+    color: red;
+  }
+  }
+
+  .lLoginMoreOption{
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+
+    .line1{
+      width: 20%;
+      position: absolute;
+      bottom: 10px;
+      right: 5px;
+      border-bottom: 1px solid rgb(189, 186, 186);
+    }
+
+    .line2{
+      width: 20%;
+      position: absolute;
+      bottom: 10px;
+      left: 5px;
+      border-bottom: 1px solid rgb(196, 189, 189);
+    }
+  }
+
+  .lLoginIcons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+
+    @include small{
+      margin-top: 0;
+      gap: 5px;
+  }
+
+    .lLoginIcon{
+      width: 80px;
+      height: 80px;
+      padding: 20px;
+      border: 1px solid rgb(226, 222, 222);
+      border-radius: 5px;
+      cursor: pointer;
+    
+      &:hover{
+        border: 1px solid #0071c2;
+      }
+    }
+
+    .gmail{
+      color: #c71610;
+    }
+
+    .facebook{
+      color: #3b5998;
+    }
+
+    .phone{
+      color: rgb(59, 59, 59);
+    }
+  }
+
+  .lLoginMore{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: #0071c2;
+    cursor: pointer;
+  }
+
+  .lLoginRegister{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline #0071c2;
+    cursor: pointer;
+  }
+
+  .lLoginInfo{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 13px;
+
+    span{
+      color: #0071c2;
+      cursor: pointer;
+    }
+  }
+
+  .lLoginFooter{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+  }
+}
+}

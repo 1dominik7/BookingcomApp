@@ -1,0 +1,118 @@
+@import '../../App.scss';
+
+.headlineContainer{
+    height: 80px;
+    background-color: #003580;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .headlineWrapper{
+        width: 100%;
+        max-width: 1124px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @include large{
+            width: 100%;
+            max-width: 794px;
+        }
+
+        @include medium{
+            max-width: 570px;
+        }
+
+        @include small{
+            max-width: 350px;
+         }
+
+        .headlineLeft{
+            cursor: pointer;
+
+            h3{
+                @include small{
+                   font-size: 16px;
+                 }
+            }
+        }
+
+        .headlineRight{
+            display: flex;
+            align-items: center;
+            gap: 40px;
+
+            @include small{
+                gap: 20px;
+             }
+
+            .navUPItem{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 12px;  
+                padding: 10px;
+                cursor: pointer;  
+            }
+
+            .language{
+                width: 45px;
+                height: 45px;
+                position: relative;
+                display: flex;
+                padding: 10px;
+                font-size: 30px;
+
+                @include small{
+                    width: 30px;
+                    height: 30px;
+                    font-size: 24px;
+                 }
+        
+                .languageDisplay{
+                    visibility: hidden;
+                    width: 150px;
+                    position: absolute;
+                    top: 55px;
+                    padding: 5px;
+                    font-size: 13px;
+                    border-radius: 5px;
+                    background-color: rgb(31, 30, 30);
+        
+                    .languageDisplayLD{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 999;
+                        color: white;
+                    }
+                }
+        
+                &:hover .languageDisplay{
+                    animation: display .5s linear .5s forwards;
+                    top: 55px;  
+            }
+        }
+
+        .headlineRightButtons{
+            display: flex;
+            gap: 10px;
+
+            .headlineLink{
+                padding: 10px;
+                color: #0071c2;
+                background-color: white;
+                border: 1px solid #0071c2;
+                cursor: pointer;
+
+                 @include small{
+                    font-size: 14px;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+    }
+}

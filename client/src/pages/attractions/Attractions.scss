@@ -1,0 +1,778 @@
+@import '../../App.scss';
+
+.attractionItemContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: 1124px;
+    margin-top: 20px;
+    position: relative;
+    justify-content: center;
+    margin: 20px auto;
+    gap: 20px;
+
+    @include large{
+        max-width: 794px;
+        font-size: 14px;
+    }
+
+    @include medium{
+        max-width: 570px;
+        font-size: 13px;
+    }
+
+    @include small{
+        max-width: 350px;
+        font-size: 12px;
+     }
+
+    .attractionItemNav{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        margin-left: 20px;
+        
+        .listAttractionsSearchLink{
+            text-decoration: none;
+            color: #0071c2;
+        }
+    }
+
+    .slider{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.420);
+        z-index: 999;
+        display: flex;
+        align-items: center;
+
+
+        .sliderWrapper{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .sliderImg{
+                width: 80%;
+                height: 80vh;
+                object-fit:scale-down;
+            }
+        }
+
+        .close{
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 30px;
+            color: lightgray;
+            cursor: pointer;
+        }
+
+        .arrow{
+            margin: 40px;
+            font-size: 50px;
+            color: lightgray;
+            cursor: pointer;
+
+            @include small{
+                font-size: 25px;
+                margin: 10px;
+             }
+        }
+    }
+
+    .attractionItemImage{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 30vh 30vh; 
+        gap: 10px;
+        cursor: pointer;
+        grid-template-areas: 
+        "main main second fourth"
+        "main main third fifth";
+        margin-bottom: 20px;
+
+        @include large{
+            grid-template-rows: 20vh 20vh; 
+        }
+
+        @include medium{
+            grid-template-columns: 24% 24% 25% 25%;
+            gap: 5px;
+        }
+
+        @include small{
+            grid-template-rows: 15vh 15vh; 
+         }
+
+        .attractionImgWrapper0{
+            grid-area: main;
+
+            .hotelImg{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+        }
+
+        .attractionImgWrapper1{
+            grid-area: second;
+
+            .hotelImg{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .attractionImgWrapper2{
+            grid-area: third;
+
+            .hotelImg{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .attractionImgWrapper3{
+            grid-area: fourth;
+
+            .hotelImg{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-top-right-radius: 10px;
+            }
+        }
+        .attractionImgWrapper4{
+            grid-area: fifth;
+
+            .hotelImg{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-bottom-right-radius: 10px;
+            }
+        }
+    }   
+
+    .attractionItemWrapper{
+        position: relative;
+        width: 100%;
+        max-width: 1084px;
+        display: flex;
+        margin: 0 auto;
+        gap: 40px;  
+
+        @include large{
+            max-width: 794px;
+            gap: 20px;
+        }
+
+        @include small{
+            max-width: 350px;
+            flex-direction: column;
+            gap: 10px;
+         }
+
+    .attractionItemLeftSide{
+        display: flex;
+        flex-direction: column;
+        flex: 3;
+        gap: 40px;
+
+        @include large{
+            gap: 20px;
+        }
+
+        @include small{
+            order: 2;
+         }
+        
+        .attractionItemTittle{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            h1{
+                @include small{
+                    font-size: 16px;
+                 }
+            }
+        }
+        .attractionItemInfo{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .attractionItemInfoTop{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .attractionItemInfoTopMain{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    span{
+                        font-size: 18px;
+
+                        @include small{
+                            font-size: 12px;
+                         }
+                    }
+
+                    .attractionStart{
+                        font-size: 26px;
+                        color: #febb02;
+                    }
+                }
+                
+                .attractionItemInfoTopOther{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 40px;
+                    gap: 5px;
+                    font-size: 14px;
+                    font-weight: 300;
+
+                    @include small{
+                        font-size: 12px;
+                     }
+
+                    .link{
+                        color: #0071c2;
+                    }
+                }
+            }
+
+            .attractionItemInfoBottom{
+                display: flex;
+                gap: 10px;
+
+                .attractionCheck{
+                    font-size: 26px;
+                    color: green;
+                }
+                .attractionItemInfoBottomMain{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .greenText{
+                        color: green;
+                    }
+                }
+            }
+        }
+
+        .attractionItemText{
+            letter-spacing: 1px;
+        }
+
+        .attractionItemLocation{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            h2{
+                @include small{
+                    font-size: 16px;
+                 }
+            }
+
+            .attractionItemLocationMap{
+                .location{
+                    width: 100%;
+                    height: 40vh;
+                }
+            }
+        }
+
+        .attractionItemLocationInfo{
+            display: flex;
+            gap: 20px;
+
+            .attractionLocationDot{
+                font-size: 32px;
+            }
+           
+            .attractionItemLocationInfoTitle{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+               
+                span{
+                    letter-spacing: 1px;
+                }
+            }
+        }
+
+        .attractionFAQ{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            h2{
+                @include small{
+                    font-size: 16px;
+                 }
+            }
+
+            .attractionFAQWrapper{
+                display: flex;
+                flex-direction: column;
+
+            .attractionFAQ1{
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                border: 1px solid rgb(223, 217, 217);
+                gap: 10px;
+                cursor: pointer;
+        
+
+                .attractionFAQMain{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    span{
+                        margin-left: 5px;
+                        font-weight: 700;
+                    }
+
+                    .attractionFAQIcon{
+                        margin-right: 5px;
+                    }
+                }
+
+                .attarcionFAQMore{
+                    margin-left: 5px;
+                }
+            }
+        }
+        }
+    }
+
+    .attractionItemRightSide{
+        position: sticky;
+        align-self: flex-start;
+        top: -230px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        gap: 50px;
+
+        @include large{
+            flex: 3;
+            top: 200px;
+            gap: 20px;
+        }
+
+        @include medium{
+            top: 150px;
+        }
+
+        @include small{
+            position: static;
+            order: 1;
+         }
+
+        .attractionDateRightSideTop{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+        .blueText{
+            margin-left: 10px;
+            color: #0071c2;
+            cursor: pointer;
+        }
+    }
+
+        .attractionDateOptions{
+            display: flex;
+            gap: 20px;
+            margin-bottom: 10px;
+
+            @include medium{
+                gap: 10px;
+            }
+
+            h1{
+                @include medium{
+                    font-size: 16px;
+                }
+            }
+
+            .attractionDateOption{
+                min-width: 23%;
+                height: 130px;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                padding: 5px;
+                border-radius: 5px;
+                position: relative;
+                cursor: pointer;
+                border: 2px solid rgb(233, 229, 229);
+
+                @include large{
+                    min-width: 20%;
+                    height: 110px;
+                }
+
+                @include medium{
+                    height: 90px;
+                    min-width: 22%;
+                }
+
+                .attractionDateOptionPositionTy{
+                    position: absolute;
+                    bottom: -15px;
+                    left: 22px;
+                    font-size: 13px;
+                    padding: 5px;
+                    border-radius: 5px;
+                    background-color: white ;
+
+                    @include large{
+                        left: 15px;
+                        font-size: 12px;
+                        padding: 5px;
+                    }
+
+                    @include medium{
+                        font-size: 10px;
+                        padding: 3px;
+                        left: 11px;
+                        bottom: -13px;
+                    }
+
+                    @include small{
+                        left: 14px;
+                        bottom: -15px;
+                        font-size: 12px;
+                        padding: 5px;
+                     }
+            }
+
+                .attractionDateOptionPositionTw{
+                    position: absolute;
+                    bottom: -15px;
+                    left: 6px;
+                    font-size: 13px;
+                    padding: 5px;
+                    border-radius: 5px;
+                    background-color: white; 
+
+                    @include large{
+                        left: -1px;
+                        font-size: 12px;
+                        padding: 5px;
+                    }
+
+                    @include medium{
+                        font-size: 10px;
+                        padding: 3px;
+                        left: -3px;
+                    }
+
+                    @include small{
+                        left: 0px;
+                        font-size: 12px;
+                     }
+            }
+
+                &:hover{
+                    border: 2px solid #0071c2;
+                }   
+        }
+
+        .active{
+            color: #0071c2;
+            border: 3px solid #0071c2;
+
+            .attractionDateOptionPositionTy.on
+            {
+                color: white;
+                background-color: blue;    
+            }
+
+            .attractionDateOptionPositionTw.on
+            {
+                color: white;
+                background-color: blue;    
+            }
+
+            &:hover{
+                color: #0071c2;
+                border: 3px solid #0071c2;
+            }
+        }
+        }
+
+        .attractionHoursOptions{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .attractionHourOption{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                .attractionHourOptionDiv{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 30%;
+                    height: 40px;
+                    padding: 5px 10px;
+                    border: 2px solid black;
+                    border-radius: 25px;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: rgb(230, 223, 223);
+                    }
+                }
+
+                    .attractionHourOptionDivOn{
+                        color: #0071c2;
+                        border: 2px solid #0071c2;;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 30%;
+                        height: 40px;
+                        padding: 5px 10px;
+                        border-radius: 25px;
+                        cursor: pointer;
+                    }
+            }
+        }
+
+        .attractionTicketContainer{ 
+            height: 400px;
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border: 3px solid #0071c2;
+            border-radius: 10px;
+            padding: 15px;
+            gap: 25px;
+
+            @include medium{
+                height: 360px;
+            }
+            
+            .attractionAlert{
+                position: absolute;
+                top:-30px;
+                left: 0;
+                color: red;
+
+                @include large{
+                    top: -20px;
+                }
+
+                @include medium{
+                    top: -25px
+                }
+            }
+
+            .attractionTicketLogos{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .attractionTicketLogo{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    .attractionCheck{  
+                        font-size: 26px;
+
+                        @include medium{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        
+            .attractionTicketOptions{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .attractionTicketAdult{
+                    display: flex;
+                    justify-content: space-between;
+                    gap:20px;
+
+                    .ticketPrice{
+                        font-weight: 300;
+                        font-size: 14px;
+                    }
+
+                    .attractionTicketAdultLeft{
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .attractionTicketAdultRight{
+                            display: flex;
+                            justify-content: space-around;
+                            text-align: center;
+                            height: 50px;
+                            width: 140px;
+                            border: 2px solid rgb(145, 140, 140);
+                            border-radius: 5px;
+
+                            @include medium{
+                                height: 40px;
+                                width: 100px;
+                            }
+                    
+                            .buttonMP{
+                                width: 35%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #0071c2;
+                                font-size: 30px;
+                                border: none;
+                                cursor: pointer;
+                            }
+
+                            button[disabled]{
+                                border: 1px solid #999999;
+                                background-color: #cccccc;
+                                color: #666666;
+                                cursor: not-allowed;
+                              }
+                            
+                            .tickets{
+                                width: 30%;
+                                font-size: 20px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+                }
+
+                .attractionTicketChild{
+                    display: flex;
+                    justify-content: space-between;
+
+                    .attractionTicketChildLeft{
+                        display: flex;
+                        flex-direction: column;
+
+                        .ticketPrice{
+                            font-weight: 300;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .attractionTicketChildRight{
+                            display: flex;
+                            justify-content: space-around;
+                            text-align: center;
+                            height: 50px;
+                            width: 140px;
+                            border: 2px solid rgb(145, 140, 140);
+                            border-radius: 5px;
+
+                            @include medium{
+                                height: 40px;
+                                width: 100px;
+                            }
+
+                            .buttonMP{
+                                width: 35%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #0071c2;
+                                font-size: 30px;        
+                                border: none;
+                                cursor: pointer;
+                            }
+
+                            button[disabled]{
+                                border: 1px solid #999999;
+                                background-color: #cccccc;
+                                color: #666666;
+                                cursor: not-allowed;
+                              }
+                            
+                            .tickets{
+                                width: 30%;
+                                font-size: 20px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        
+                    }
+                }
+            }
+
+            .attractionTicketBottom{
+                display: flex;
+                justify-content: space-between;
+                margin: 0 10px 0px 10px;
+
+            .ticketPrice{
+                display: flex;
+                flex-direction: column;
+
+                .ticketPriceTotal{
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+            }   
+
+            .ticketButton{
+                width: 150px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #0071c2;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+
+                @include medium{
+                    width: 100px;
+                }
+
+                @include small{
+                    width: 80px;
+                    height: 40px;
+                 }
+            }
+        }
+    }
+    }
+}
+}

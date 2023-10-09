@@ -1,0 +1,73 @@
+@import '../../App.scss';
+
+.tripAccountBottom{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #003580;
+    color: white;
+
+    .tripAccountBottomListC{
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+
+    .tripAccountBottomList{
+        width: 150px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid white;
+        font-size: 13px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: #3372a0;
+        }
+    }
+}
+
+hr{
+    color: white;
+}
+
+.tripAccountBottomOptionsC{
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: underline;
+
+    .tripAccountBottomOptions{
+        width: 100%;
+        max-width: 1124px; 
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @include large{
+            max-width: 794px;
+            font-size: 14px;
+        }
+
+        @include small{
+            width: 100%;
+            max-width: 350px;
+            font-size: 10px;
+            gap: 5px;
+        }
+    
+
+        .tripAccountBottomOption{
+            padding: 10px;
+            cursor: pointer;
+        
+            &:hover{
+                background-color: #003669;
+            }
+        }
+    }
+}
+}

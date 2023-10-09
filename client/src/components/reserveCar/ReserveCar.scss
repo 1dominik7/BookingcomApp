@@ -1,0 +1,587 @@
+@import '../../App.scss';
+
+.reserveCar {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  .reserveCarContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    position: relative;
+    width: 80%;
+    max-height: 90%;
+    overflow-y: scroll;
+    gap: 20px;
+    border-radius: 5px;
+
+    @include large{
+        max-width: 794px;
+        font-size: 14px;
+    }
+
+    @include medium{
+        width: 90%;
+        max-width: 570px;
+        font-size: 13px;
+    }
+
+    @include small{
+        width: 100%;
+        max-width: 350px;
+     }
+
+    .carTitle{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 5px;
+
+        .reserveCarBackButton{
+            text-decoration: none;
+            color: #0071c2;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        h1{
+            font-size: 28px;
+
+            @include medium{
+                font-size: 20px;
+             }
+        }
+
+        p{
+            font-size: 15px;
+            font-weight: 300;
+
+            @include medium{
+                font-size: 13px;
+             }
+        }
+    }
+    
+    .carInfo{
+        display: flex;
+        width: 100%;
+        gap: 25px;
+
+        @include medium{
+            gap: 15px;
+         } 
+
+        @include large{
+        width: 60%;
+     }
+
+     @include small{
+        width: 100%;
+        flex-direction: column;
+     }
+
+        .carInfoLeft{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            flex: 5;
+
+        @include large{
+            width: 100%;
+        }
+
+        @include small{
+            gap: 10px;
+         }
+            
+            .carLines{
+                display: flex;
+                gap: 15px;
+
+                @include medium{
+                    gap: 5px;
+                }
+         
+                .carLine1{
+                border:solid 3px #0071c2;
+                flex: 1;
+            }
+
+                .carLine2{
+                border:solid 3px rgb(173, 170, 170);
+                flex: 1;
+            }
+        }
+
+            .carFreeCancellation{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                padding: 15px 20px;
+                border: 2px solid green;
+                border-radius: 10px;
+                background-color: rgb(222, 248, 222);
+
+                @include medium{
+                    padding: 10px;
+                 }
+
+                .carIcon{
+                    color: white;
+                    background-color: green;
+                    border-radius: 50%;
+                    font-size: 30px;  
+
+                    @include medium{
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .carInfoLeftCenter{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .carPhoto{
+                    width: 250px;
+                    height: 170px;
+
+                    @include large{
+                        width: 150px;
+                        height: 100px;
+                    }
+
+                    @include medium{
+                        width: 90px;
+                        height: 60px;
+                    }
+                }
+
+                .carDetails{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;  
+
+                    @include large{
+                        gap: 10px;
+                    }
+
+                    .carDetailsPick{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 8px;
+                        border-radius: 10px;
+                        background-color: blue;
+                        color: white;
+                        width: 70px;
+                        font-size: 13px;  
+                    }
+
+                    .carDetailsTitle{
+                        display: flex;
+                        align-items: flex-end;
+                        gap: 10px;
+
+                        h1{
+                            font-size: 26px;
+
+                            @include large{
+                                font-size: 20px;
+                            }
+
+                            @include small{
+                                font-size: 16px;
+                             }
+                        }
+                    }
+
+                    .carDetailsInfo{
+                        display: flex;
+                        gap: 20px;
+
+                        @include large{
+                            gap: 5px;
+                            font-size: 13px;
+                        }
+
+                         @include small{
+                           font-size: 12px;
+                        }
+
+                        .carDetailsInfosLeft{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                            .carDetailsInfoLeft{
+                                display: flex;
+                                gap: 10px;
+
+                                @include large{
+                                    gap: 5px;
+                                }
+                            }
+                        }
+
+                        .carDetailsInfosRight{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                            .carDetailsInfoRight{
+                                display: flex;
+                                gap: 10px;
+
+                                @include large{
+                                    gap: 5px;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .carLocation{
+                        text-transform: capitalize;
+                    }
+
+                    .carGuaranteed{
+                        display: flex;
+                        align-items: center;
+                        width: 400px;
+                        gap: 10px;
+                        padding: 15px 20px;
+                        border: 2px solid green;
+                        border-radius: 10px;
+                        background-color: rgb(222, 248, 222);
+
+                        @include large{
+                            width: 200px;
+                            gap: 5px;
+                            padding: 10px;
+                        }
+
+                        @include medium{
+                            width: 150px;
+                            font-size: 12px;
+                        }
+
+                        @include small{
+                            width: 100%;
+                         }
+
+                        .carIcon{
+                            color: white;
+                            background-color: green;
+                            border-radius: 50%;
+                            font-size: 30px;  
+
+                            @include large{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .carInfoRight{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 50px;
+            flex: 2;
+            box-shadow: -4px 1px 18px -11px rgba(66, 68, 90, 1);;
+            padding: 20px;
+
+            @include medium{
+                gap: 20px;
+            }
+
+            .carInfoRightDesc{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                h2{
+                    @include medium{
+                        font-size: 18px;
+                    }
+
+                    @include small{
+                        font-size: 16px;
+                     }
+                }
+
+                .carInfoRightDescLogo{
+                    display: flex;
+                    gap: 10px;
+
+                    .carLogoBrand{
+                        width: 80px;
+                        height: 30px;
+
+                    @include large{
+                        width: 60px;
+                        height: 20px;
+                    }
+                }
+                }
+
+                .carInfoRightDescAddress{
+                    display: flex;
+                    gap: 25px;
+                    
+                    .carFontLocationIcon{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        font-size: 28px;
+                        height: 145px;
+                        gap: 5px;
+
+                        .carIcon{   
+                            background-color:#fff;
+                            border:3px solid black;    
+                            height:15px;
+                            border-radius:50%;
+                            -moz-border-radius:50%;
+                            -webkit-border-radius:50%;
+                            width:15px;
+                        }
+
+                        .carVerticalLine{
+                            border-left: 2px solid black;
+                            margin-left: 7px;
+                            height: 100px;
+                        }
+                    }
+
+                    .carInfoRightDescAddressTop{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        .carInfoRightDescAddressTop1{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                        }
+                    }
+                } 
+            }
+
+            .carInfoRightPrice{
+                display: flex;
+                flex-direction: column;
+                gap:20px;
+
+                h2{
+                @include medium{
+                        font-size: 18px;
+                    }
+
+                    @include small{
+                       font-size: 16px;
+                     }
+                    }
+
+                .carInfoRightHireChange{
+                display: flex;
+                justify-content: space-between;
+                gap:20px;
+                }
+            }    
+        }
+    }
+
+    .carReserveXmark{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 26px;
+        cursor: pointer;
+    }
+
+    #active{
+        border-top: 15px solid green
+    }
+
+    .carReserveInsuranceProtectionInsurance{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 70%;
+        padding: 15px;
+        border-radius: 5px;
+        border: 3px solid #0071c2;
+        border-top: 15px solid #0071c2;
+
+        @include medium{
+            width: 90%;
+        }
+
+        @include small{
+          width: 100%;
+         }
+
+        .carReserveInsuranceProtectionInsuranceTop{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h2{
+                @include medium{
+                    font-size: 18px;
+                }
+
+                @include small{
+                    font-size: 16px;
+                 }
+        }
+    }
+
+        .carReserveInsuranceProtectionInsuranceCentre{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            span{
+                font-weight: 300;
+            }
+
+            .carReserveInsuranceProtectionInsuranceCentreModal{
+                display: flex;
+                flex-direction: column;
+                padding: 20px 30px;
+                border: solid 1px rgb(206, 202, 202) ;
+                cursor: pointer;
+                gap: 10px;
+
+                .carReserveInsuranceProtectionInsuranceCentreModalClose{
+                    display: flex;
+                    justify-content: space-between;
+
+                span{
+                    color: #0071c2;
+                    font-weight: 500;
+                }
+
+                .carIcon{
+                    font-size: 22px;
+                }
+            }
+
+            .carReserveInsuranceProtectionInsuranceCentreModalOpen{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .carReserveInsuranceProtectionInsuranceCentreModalOpenOption{
+                    display: flex;
+                    gap: 10px;
+                   align-items: center;
+
+                   .carIcon{
+                    color: green;
+                    font-size: 20px;
+                   }
+                }
+            }
+            }
+        }
+    
+        .carReserveInsuranceProtectionInsuranceBottom{
+            display: flex;
+            justify-content: space-between;
+
+            .carReserveInsuranceProtectionInsuranceBottomLeft{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .blue{
+                    color: #0071c2;
+                }
+            }
+
+            .carReserveInsuranceProtectionInsuranceBottomRight{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px 60px;
+                border-radius: 5px;
+                border: solid 1px #0071c2;
+                background-color: white;
+                color: #0071c2;
+                cursor: pointer;
+
+                @include medium{
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+
+    .carReserveBottom{
+        display: flex;
+        padding: 20px;
+        box-shadow: 3px -8px 17px -7px rgba(66, 68, 90, 1);
+
+        @include small{
+            padding: 10px;
+         }
+
+        .carReserveBottomLeft{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 70%;
+
+            h2{
+                @include small{
+                    font-size: 16px;
+                 }
+            }
+
+            span{
+                @include small{
+                    font-size: 12px;
+                 }
+            }
+        }
+
+        .carReserveBottomRight{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto auto;
+            width: 150px;
+            height: 70px;
+            color: white;
+            border-radius: 5px;
+            background-color: #0071c2;
+            cursor: pointer;
+
+            @include medium{
+                width: 120px;
+                height: 50px;
+            }
+
+            @include small{
+                width: 100px;
+             }
+        }
+    }
+
+  }
+}

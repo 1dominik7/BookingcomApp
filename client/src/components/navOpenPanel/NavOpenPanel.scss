@@ -1,0 +1,32 @@
+.navAccPanel{
+    width: 220px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 5px;
+    font-size: 13px;
+    box-shadow: -1px 2px 31px -16px rgba(66, 68, 90, 1);
+    border-radius: 2px;
+    background-color: white;
+    color: rgb(37, 37, 37);
+    overflow: visible;
+
+    .navAccPanelItems{
+        display: flex;
+        align-items: center;
+        gap: 10px;  
+        padding: 10px;
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+
+        .navUPIconL{
+            font-size: 22px;
+        }
+    
+        &:hover{
+            background-color: lightgray;
+        }
+    }
+}

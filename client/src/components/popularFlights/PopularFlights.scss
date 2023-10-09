@@ -1,0 +1,78 @@
+@import '../../App.scss';
+
+.popularFlights{
+    width: 100%;
+    height: 350px;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 1;
+
+    @include large{
+      width: 100%;
+      max-width: 794px;
+  }
+
+  @include medium{
+        max-width: 570px;
+        height: 180px;
+    }
+
+    @include small{
+      width: 100%;
+      max-width: 350px;
+   }
+
+    .popularItem{
+        flex: 1;
+        color: black;
+        height: 250px;
+        cursor: pointer;
+
+      .popularImg{
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+        border-radius: 20px;
+
+        @include medium{
+          height: 50%;
+      }
+
+      @include small{
+        height: 40%;
+     }
+      }
+
+      .popularTitles{
+        h1{
+            font-size: 24px;
+
+            @include medium{
+            font-size: 18px;
+    }
+
+    @include small{
+      font-size: 16px;
+   }
+        }
+
+        .popularTitlesH2{
+            margin-top: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: rgb(78, 75, 75);
+
+            @include medium{
+              font-size: 13px;
+      }
+
+      @include small{
+        font-size: 12px;
+     }
+        }
+      }
+    }
+}

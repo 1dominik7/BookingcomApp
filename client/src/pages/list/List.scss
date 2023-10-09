@@ -1,0 +1,235 @@
+    @import '../../App.scss';
+    
+    .listContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    .listWrapper{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    gap: 20px;
+
+    @include large{
+        width: 100%;
+        max-width: 794px;
+     }
+
+     @include medium{
+        width: 100%;
+        max-width: 570px;
+    }
+
+    @include small{
+        width: 100%;
+        max-width: 350px;
+        flex-direction: column;
+     }
+
+    .listSearch{
+        flex: 1;
+        background-color: #febb02;
+        padding: 10px;
+        border-radius: 10px;
+        position: sticky;
+        top: 10px;
+        height: max-content;
+
+        @include medium{
+            padding: 5px;
+            flex: 2;
+        }
+
+        @include small{
+           position:static;
+         }
+
+        .lsTitle{
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .lsItem{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 10px;
+
+            .lsItemSearchC{
+                height: 100%;
+                width: 100%;
+                display: flex;
+
+                @include small{
+                    position: relative;
+                 }
+
+            input{
+                width: 100%;
+
+                &::placeholder{
+                    font-size: 14px;
+                }
+            }
+
+            .foundHotelCity{
+                position: absolute;
+                top: 110px;
+                left: 0px;
+                width: 100%;
+                background-color: white;
+                box-shadow: 2px 5px 24px -11px rgba(66, 68, 90, 1);
+                border-radius: 10px;
+                z-index: 999;
+                overflow-y: scroll;
+
+                @include large{
+                   left: 5px;
+                }
+
+                @include medium{
+                    top: 100px;
+                }
+
+                @include small{
+                    top: 35px;
+                    left: 0px;
+                 }
+                
+                .foundLink{
+                    width: 100%;
+                    color: black;
+                    cursor: pointer;
+
+                    .foundAttraction{
+                        margin: 5px 0;
+                        padding: 5px;
+                        border-bottom: 1px solid rgb(206, 198, 198);
+
+                        .foundtitle>span{
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .bottomText{
+                    display: flex;
+                    justify-content: flex-end;
+                    font-size: 15px;
+                    padding: 3px;
+                    color: #0071c2;
+                }
+            }
+        }
+        
+        .lsOptions{
+            padding: 10px;
+
+            @include medium{
+                padding: 5px;
+            }
+        }
+
+        label{
+            font-size: 14px;
+
+            @include medium{
+                font-size: 13px;
+            }
+        }
+
+        span{
+            height: 30px;
+            border: none;
+            padding: 5px;
+            font-size: 14px;
+
+            @include medium{
+                font-size: 13px;
+            }
+        }
+
+        input{
+            height: 30px;
+            padding: 5px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .lsOptionItem{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 12px;
+
+            .lsOptionInput{
+                width: 65px;
+                font-size: 15px;
+
+                 @include medium{
+                font-size: 13px;
+            }
+
+                &::placeholder{
+                    font-size: 15px;
+
+                    @include medium{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    .lsDataItem{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-bottom: 10px;
+
+        .date{
+            position: absolute;
+            top: 50px;
+            z-index: 3;
+
+            @include medium{
+                scale: 0.8;
+                left: -30px;
+                top: 30px
+            }
+
+            @include small{
+                top: 10px;
+                left: -35px;
+             }
+        }
+    }
+
+    .buttonSearch{
+        padding: 10px;
+        background-color: #0071c2;
+        color: white;
+        border: none;  
+        width: 100%;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}
+    
+    .listResult{
+        flex: 3;
+
+        @include medium{
+            flex: 2;
+        }
+    }
+}
+}

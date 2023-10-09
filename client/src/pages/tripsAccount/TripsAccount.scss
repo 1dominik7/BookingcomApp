@@ -1,0 +1,80 @@
+@import '../../App.scss';
+
+.tripsAccountContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    .tripsAccountWrapper{
+        width: 100%;
+        max-width: 1124px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        margin-top: 30px;
+        padding: 10px;
+        border: 1px solid gray;
+
+        @include large{
+            width: 100%;
+            max-width: 794px;
+        }
+
+        @include medium{
+            width: 100%;
+            max-width: 570px;
+        }
+
+        @include small{
+            width: 100%;
+            max-width: 350px;
+         }
+        
+        .tripsAccountPhoto{
+            .tripsAccountPhotoImg{
+                width: 270px;
+                height: 320px;
+            }
+        }
+
+        .tripsAccountDesc{
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+            margin-bottom: 100px;
+
+            span{
+                font-size: 14px;
+            }
+
+            .tripAccountDescBlue{
+                color: #0071c2;
+                cursor: pointer;
+            }
+        }
+
+        .tripsAccountTC{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: black;
+
+            .tripsAccountTCI{
+                width: 100%;
+                height: 200px;
+
+                @include small{
+                    height: auto;
+                 }
+            }
+        }
+    }
+}

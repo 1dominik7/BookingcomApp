@@ -1,0 +1,87 @@
+@import '../../App.scss';
+
+.faqContainer{
+    width: 100%;
+    max-width: 1024px;
+    gap: 20px;
+    z-index: 1;
+
+    @include large{
+        width: 100%;
+        max-width: 794px;
+    }
+
+    @include medium{
+        max-width: 570px;
+        }
+
+        @include small{
+            max-width: 350px;
+            gap: 10px;
+         }
+
+    h1{
+        margin-bottom: 20px;
+
+        @include medium{
+            font-size: 18px;
+            }
+
+            @include small{
+                font-size: 16px;
+                margin-bottom: 10px;
+             }
+    }
+
+    .faqItems{
+        display: grid;
+        grid-template:
+        "a b c"
+        "d e f";
+        gap: 20px;
+        color: black;
+        cursor: pointer;
+
+      .faqItem{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+      
+        h1{
+            font-size: 22px;
+
+            @include medium{
+                font-size: 18px;  
+                }
+
+                @include small{
+                    font-size: 16px;
+                 }
+        }
+        p{
+            font-size: 15px;
+            font-weight: 300;
+
+            @include medium{
+                font-size: 13px;
+                }
+
+                @include small{
+                    font-size: 12px;
+                 }
+        }
+
+        h3{
+            @include medium{
+                font-size: 16px;
+                margin-bottom: 5px;
+                }
+
+                @include small{
+                    font-size: 14px;
+                 }
+        }
+    }
+    }
+}

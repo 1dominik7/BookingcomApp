@@ -1,0 +1,330 @@
+@import '../../App.scss';
+
+.headerFlight{
+    background-color: #003580;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .headerContainer.listMode{
+        margin:20px 0px 0px 0px;
+    }
+
+    .headerContainer{
+        width: 100%;
+        max-width: 1024px;
+        margin: 20px 0px 100px 0px;
+
+        @include large{
+            width: 100%;
+            max-width: 794px;
+        }
+
+        @include medium{
+            width: 100%;
+            max-width: 570px;
+            font-size: 13px;
+            margin: 20px 0px 50px 0px;
+        }
+
+        @include small{
+            width: 100%;
+            max-width: 350px;
+            margin: 20px 0px 140px 0px;
+         }
+    
+    .headerDesc{
+        margin: 20px 0px;
+
+        @include small{
+            font-size: 12px;
+         }
+    }
+
+    .headerBtn{
+        background-color: #0071c2;
+        color: white;
+        font-weight: 500;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+
+        @include small{
+            margin-bottom: 20px;
+         }
+    }
+
+    .headerTitle{
+        @include small{
+            font-size: 16px;
+         }
+    }
+
+    .headerSearch{
+        width: 100%;
+        max-width: 1024px;
+        height: 50px;
+        border: 3px solid #febb02;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px 0px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: -25px;
+        background-color: white;    
+
+        @include large{
+            width: 100%;
+            max-width: 794px;
+        }
+
+        @include medium{
+            width: 100%;
+            max-width: 570px;
+            gap: 5px;
+            padding: 10px 5px;
+        }
+
+        @include small{
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            flex-direction: column;
+            bottom: -30px;
+         }
+
+        .headerSearchItem{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+
+            @include large{
+                gap: 5px;
+            }
+
+            @include medium{
+              width: 25%;
+            }
+
+            @include small{
+                height: 25px;
+                width: 100%;
+             }
+
+            .foundAirports{
+                position: absolute;
+                top: 40px;
+                width: 100%;
+                height: 190px;
+                background-color: white;
+                box-shadow: 2px 5px 24px -11px rgba(66, 68, 90, 1);
+                border-radius: 10px;
+                font-size: 14px;
+                z-index: 999;
+                overflow-y: scroll;
+
+                @include medium{
+                    height: 150px;
+                    font-size: 12px;
+                    }
+
+                    @include small{
+                        top: 35px;
+                     }
+
+                .foundLink{
+                    color: black;
+                    width: 100%;
+                    cursor: pointer;
+
+                    .foundAirport{
+                        margin: 5px 0;
+                        padding: 5px;
+                        border-bottom: 1px solid rgb(206, 198, 198);
+
+                        .foundtitle>span{
+                            font-weight: bold;
+                        }
+                    }
+                }
+                    .bottomText{
+                        display: flex;
+                        justify-content: flex-end;
+                        font-size: 15px;
+                        padding: 3px;
+                        color: #0071c2;
+
+                        @include medium{
+                            margin-right: 5px;
+                            font-size: 12px;
+                            }
+                    }
+            }
+
+            .headerSearchInput{
+                border: none;
+                outline: none;
+
+                @include medium{
+                    width: 100%;
+                  }
+                  
+                  @include small{
+                    margin-left: 5px;
+                 }
+            }
+
+            .clearButton{
+              width: 50px;
+              height: 30px;
+              background-color: #0071c2;
+              color: white;
+              border-radius: 5px;
+              border: none;
+              cursor: pointer;
+
+              @include large{
+                display: none;
+            }
+            }
+        
+        .headerIcon{
+            color: rgb(110, 108, 108);
+        }
+
+        .headerSearchText{
+            color: rgb(110, 108, 108);
+            cursor: pointer;
+        }
+        
+        .date{
+            position: absolute;
+            top: 40px;
+            z-index: 2;
+
+            @include medium{
+                top: 10px;
+                left: -30px;
+                scale: 0.8;
+              }
+
+              @include small{
+                left: -30px;
+                top: 0px;
+             }
+        }
+
+        .options{
+            position: absolute;
+            top: 50px;
+            background-color: white;
+            color: gray;
+            border-radius: 5px;
+            --webkit-box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.4);
+            box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.4);
+            z-index: 2;
+
+            @include large{
+                left: -30px;
+            }
+
+            @include small{
+                top: 23px;
+                left: 0;
+             }
+
+            .optionItem{
+                width: 200px;
+                display: flex;
+                justify-content: space-between;
+                margin: 10px;
+
+                @include medium{
+                    width: 150px;
+                  }
+
+                .optionCounter{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 12px;
+                    color: black;
+
+                    .optionCounterButton{
+                        width: 30px;
+                        height: 30px;
+                        border: 1px solid #0071c2;
+                        color: #0071c2;
+                        cursor: pointer;
+                        background-color: white;
+
+                        @include medium{
+                            width: 20px;
+                            height: 20px;
+                          }
+                    }
+
+                    .optionCounterButton:disabled{
+                        cursor: not-allowed;
+                    }
+                }
+            }
+        }
+    }
+
+    .button{
+    @include medium{
+        width: 13%;
+    }
+
+    @include small{
+        width: 100%;
+     }
+
+    .headerBtnSearch{
+        background-color: #0071c2;
+        color: white;
+        font-weight: 500;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        
+    @include small{
+        width: 100%;
+     }
+    }
+    }
+
+    .data{
+        @include large{
+            width: 140px;
+        }
+
+        @include medium{
+            width: 20%;
+        }
+
+        @include small{
+            width: 100%;
+         }
+    }
+
+    .people{
+        @include large{
+            width: 90px;
+        }
+
+        @include medium{
+            width: 15%;
+        }
+
+        @include small{
+            width: 100%;
+         }
+    }
+}
+}
+}

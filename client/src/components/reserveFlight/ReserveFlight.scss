@@ -1,0 +1,38 @@
+@import '../../App.scss';
+
+.reserveFlight {
+    display: flex;
+    flex-direction: column;
+
+    @include medium{
+      width: 100%;
+      max-width: 570px;
+  }
+
+    .rFlightItems{
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .rTitle{
+        display: flex;
+        gap: 20px;
+      }
+
+      .seats{
+        display: flex;
+        flex-wrap: wrap;
+        width: 20%;
+        gap: 5px;
+        font-size: 10px;
+        color: rgb(36, 35, 35);
+
+        .seat{
+          display: flex;
+          flex-direction: column;
+
+        }
+
+      }
+    }
+}

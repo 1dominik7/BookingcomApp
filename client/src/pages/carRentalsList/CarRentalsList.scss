@@ -1,0 +1,243 @@
+@import '../../App.scss';
+
+.listCarContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    .listCarWrapper{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    gap: 20px;
+
+    @include large{
+        width: 100%;
+        max-width: 794px;
+    }
+
+    @include medium{
+        width: 100%;
+        max-width: 570px;
+    }
+
+    @include small{
+        width: 100%;
+        max-width: 350px;
+        flex-direction: column;
+     }
+
+    .listCarSearch{
+        flex: 1 ;
+        padding: 10px;
+        border-radius: 10px;
+        position: sticky;
+        top: 10px;
+        height: max-content;
+
+        @include large{
+            width: 30%;
+        }
+
+        @include small{
+           position: static;
+           width: 100%;
+           padding: 5px;
+         }
+
+        .lsCarTitle{
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .lsCarItem{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 15px;
+
+            .lsCarItemDate{
+                display: flex;
+                justify-content: space-between;
+
+                @include medium{
+                    font-size: 12px;
+                }
+
+                .lsCarItemDateLeft{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    cursor: pointer;
+                }
+
+                .lsCarItemDateRight{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    cursor: pointer;
+
+                    .lsCarItemDateRightF{
+                        position: relative;
+
+                        &:hover{
+                            font-weight: 500;;
+                        }
+
+                        .carsHours{
+                            position: absolute;
+                            padding: 5px;
+                            top: 20px;
+                            left: 0px;
+                            width: 90px;
+                            height: 200px;
+                            font-size: 18px;
+                            overflow-y: scroll;
+                            background-color: white;
+                            z-index: 2;
+
+                            @include large{
+                                width: 70px;
+                            }
+
+                            @include medium{
+                                width: 50px;
+                                height: 100px;
+                                left: -5px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .lsCarItemIC{
+
+                input{
+                    width: 100%;
+
+                    &::placeholder{
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            span{
+                cursor: pointer;
+            }
+        
+            .foundAirports{
+                position: absolute;
+                top: 60px;
+                width: 100%;
+                background-color: white;
+                box-shadow: 2px 5px 24px -11px rgba(66, 68, 90, 1);
+                border-radius: 10px;
+                z-index: 999;
+
+                @include large{
+                    font-size: 14px;
+                }
+
+                @include medium{
+                   font-size: 12px;
+                }
+            
+
+            .foundLink{
+                color: black;
+                width: 100%;
+                cursor: pointer;
+
+                .foundAirport{
+                    margin: 5px 0;
+                    padding: 5px;
+                    border-bottom: 2px solid black;
+
+                    .foundtitle>span{
+                        font-weight: bold;
+                    }
+                }
+            }
+            .bottomText{
+                display: flex;
+                justify-content: flex-end;
+                font-size: 15px;
+                padding: 3px;
+                color: #0071c2;
+            }
+        }
+
+        .lsCarOptions{
+            padding: 10px;
+        }
+
+        label{
+            font-size: 14px;
+        }
+
+        input{
+            height: 30px;
+            padding: 5px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            @include medium{
+                font-size: 12px;
+            }
+        }
+
+        .lsCarOptionItem{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 12px;
+
+            .lsCarOptionInput{
+                width: 50px;
+            }
+        }
+
+        .date{
+            position: absolute;
+            top: 80px;
+            z-index: 3;
+
+            @include medium{
+                top: 45px;
+                left: -35px;
+                scale: 0.8
+            }
+        }
+    }
+
+    .searchButton{
+        padding: 10px;
+        background-color: #0071c2;
+        color: white;
+        border: none;
+        width: 100%;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}
+    
+    .listCarResult{
+        flex: 2;
+
+        @include large{
+            width: 70%;
+        }
+
+        @include small{
+            width: 100%;
+         }
+    }
+
+}
+}

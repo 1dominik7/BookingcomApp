@@ -1,0 +1,309 @@
+@import '../../App.scss';
+
+.listAttractionsContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    .listAttractionstWrapper{
+    width: 100%;
+    max-width: 1224px;
+    display: flex;
+    gap: 20px;
+
+    @include large{
+        width: 100%;
+        max-width: 794px;
+    }
+
+    @include medium{    
+        max-width: 570px;
+        font-size: 13px;
+    }
+
+    @include small{
+        width: 100%;
+        max-width: 350px;
+        flex-direction: column;
+        font-size: 12px;
+     }
+
+    .listAttractionsSearch{
+        flex: 2;
+        padding: 10px;
+        border-radius: 10px;
+        position: sticky;
+        top: -50px;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include large{
+            width: 40%;
+        }
+
+        @include small{
+            width: 100%;
+            position: static;
+         }
+
+        .listAttractionsSearchLinks{
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            font-size: 14px;
+
+            .listAttractionsSearchLink{
+                text-decoration: none;
+                color: #0071c2;
+
+                &:active{
+                    color: black;
+                }
+            }
+        }
+
+        .lsAttractionsSearchCity{
+            h2{
+                @include large{
+                    font-size: 20px;
+                }
+
+                @include small{
+                    font-size: 16px;
+                 }
+            }
+            h3{
+                @include large{
+                    font-size: 16px;
+                }
+
+                @include small{
+                    font-size: 16px;
+                 }
+            }
+        }
+
+        .lsAttractionsSearch{
+            width: 100%;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 10px;
+            border: 5px solid #febb02;
+            background-color: #febb02;
+
+        .lsAttractionsSearchItem{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 5px;
+            position: relative;
+            padding: 2px;
+            flex:1;
+            background-color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            cursor: pointer;
+
+            .AttractionsIcon{
+                color: rgb(110, 108, 108);
+                margin-left: 15px;
+                font-size: 18px;
+            }
+
+            .AttractionsSearchInput{
+                width: 100%;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                font-size: 18px;
+                cursor: pointer;
+
+                @include medium{
+                    font-size: 14px;
+                }
+
+                &::placeholder{
+                    font-size: 18px;
+
+                    @include medium{
+                        font-size: 14px;
+                    }
+
+                    @include large{
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .foundLocations{
+                position: absolute;
+                top: 55px;
+                width: 100%;
+                background-color: white;
+                box-shadow: 2px 5px 24px -11px rgba(66, 68, 90, 1);
+                border-radius: 10px;
+                z-index: 999;
+
+                @include large{
+                    top: 40px;
+                }
+            
+
+            .foundLink{
+                color: black;
+                width: 100%;
+                cursor: pointer;
+
+                .foundLocation{
+                    margin: 5px 0;
+                    padding: 5px;
+                    border-bottom: 2px solid black;
+
+                    .foundtitle>span{
+                        font-weight: bold;
+                        
+                    }
+                }
+            }
+            .bottomText{
+                display: flex;
+                justify-content: flex-end;
+                font-size: 15px;
+                padding: 3px;
+                color: #0071c2;
+            }
+        }
+
+        label{
+            font-size: 14px;
+        }
+
+        span{
+            height: 30px;
+            border: none;
+            padding: 5px;
+        }
+
+        input{
+            height: 30px;
+            padding: 5px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+
+.AttractionsSearchData{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    flex:1;
+    position: relative;
+    border: 1px solid rgb(216, 211, 211);
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+
+    .AttractionsIcon{
+        font-size: 22px;
+        margin-left: 15px;
+        color: rgb(110, 108, 108);
+    }
+
+    .AttractionSearchText{
+        font-size: 18px;
+        color: rgb(110, 108, 108);
+
+        @include large{
+            font-size: 14px;
+        }
+    }
+
+    .dateAttractions{
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    z-index: 99; 
+
+    @include large{
+        top: 50px;
+        width: auto;
+    }
+}
+}
+        
+    .AttractionsSearchButton{
+        width: 100%;
+        flex:1;
+        border-radius: 10px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin-top: 3px;
+        background-color: #0071c2;
+        color: white;
+        cursor: pointer;
+        border: none;
+    }
+}
+}
+
+    .lsAttractionItem{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .lsAttractionsOptions{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            @include small{
+                flex-direction: row;
+             }
+
+            .lsAttractionsOption{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                
+                .lsAttractionsOptionDetails{
+                    display: flex;
+                    gap: 10px;
+
+                    .lsAttractionsOptionDetailsCheckBox{
+                        width: 20px;
+                        height: 20px;
+                       
+                        cursor: pointer;
+                    }
+
+                    .lsFlightOptionDetailsCount{
+                        font-weight: 300;
+                        color: rgb(73, 73, 73);
+                    }
+                }
+        }
+    }
+    }
+    
+    .listFlightResult{
+        flex: 5;
+
+        @include large{
+            width: 60%;
+        }
+
+        @include small{
+            width: 100%;
+         }
+    }
+
+}
+}

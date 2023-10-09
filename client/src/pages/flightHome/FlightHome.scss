@@ -1,0 +1,72 @@
+@import '../../App.scss';
+
+*{
+    box-sizing: border-box;
+}
+
+
+.flightHomeContainer{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    .flightHomeDesc{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include medium{
+            width: 100%;
+            max-width: 570px;
+            height: 100%;
+        }
+
+        @include small{
+            width: 100%;
+            max-width: 350px;
+         }
+
+.flightHomeTitle{
+    width: 1024px;
+    font-size: 26px;
+
+    @include large{
+        width: 100%;
+        max-width: 794px;
+    }
+
+    @include medium{
+        width: 100%;
+        max-width: 570px;
+        font-size: 20px;
+    }
+
+    @include small{
+        width: 100%;
+        max-width: 350px;
+        font-size: 16px;
+     }
+}
+
+p{
+    width: 1024px; 
+    font-size: 16px;
+
+    @include large{
+        max-width: 794px;
+    }
+
+    @include medium{
+        max-width: 570px;
+        font-size: 13px;
+    }
+
+    @include small{
+        width: 100%;
+        max-width: 350px;
+     }
+}
+    }
+}

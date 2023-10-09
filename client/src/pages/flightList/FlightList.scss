@@ -1,0 +1,217 @@
+@import '../../App.scss';
+
+.listFlightContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+
+    .listFlightWrapper{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    gap: 20px;
+
+    @include large{
+        max-width: 794px;
+    }
+
+    @include medium{
+        max-width: 570px;
+    }
+
+    @include small{
+        width: 100%;
+        max-width: 350px;
+        flex-direction: column;
+     }
+
+    .listFlightSearch{
+        flex: 1;
+        padding: 10px;
+        border-radius: 10px;
+        position: sticky;
+        top: 10px;
+        height: max-content;
+
+        @include medium{
+            flex: 2;
+        }
+        
+    @include small{
+        position: static;
+     }
+
+        .lsFlightTitle{
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .lsFlightItem{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 15px;
+            
+            @include small{
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+
+            .dateFlight{
+                position: absolute;
+                top: 55px;
+                z-index: 3;
+
+                @include large{
+                    top: 70px;
+                }
+
+                @include medium{
+                    scale: 0.8;
+                    top: 40px;
+                    left: -30px;
+                }
+
+                @include small{
+                    top: 15px;
+                    left: -35px;
+                    }
+            }
+
+            .lsFlightItemIC{
+                input{
+                    width: 100%;
+
+                    &::placeholder{
+                    font-size: 14px;
+
+                    @include small{
+                        font-size: 12px;
+                        }
+                }
+                }
+            }
+
+            span{
+                cursor: pointer;
+            }
+
+            .foundAirportsTo{
+                position: absolute;
+                top: 60px;
+                width: 100%;
+                height: 190px;
+                background-color: white;
+                box-shadow: 2px 5px 24px -11px rgba(66, 68, 90, 1);
+                border-radius: 10px;
+                font-size: 14px;
+                z-index: 999;
+                overflow-y: scroll;
+
+                @include small{
+                    height: 140px;
+                    }
+            }
+        
+            .foundAirports{
+                position: absolute;
+                top: 60px;
+                width: 100%;
+                height: 190px;
+                background-color: white;
+                box-shadow: 2px 5px 24px -11px rgba(66, 68, 90, 1);
+                border-radius: 10px;
+                font-size: 14px;
+                z-index: 999;
+                overflow-y: scroll;
+
+                @include small{
+                    height: 140px;
+                    }
+            }
+
+            .foundLink{
+                color: black;
+                width: 100%;
+                cursor: pointer;
+
+                .foundAirport{
+                    margin: 5px 0;
+                    padding: 5px;
+                    border-bottom: 1px solid rgb(206, 198, 198);
+
+                    .foundtitle>span{
+                        font-weight: bold;
+                    }
+                }
+            }
+                .bottomText{
+                    display: flex;
+                    justify-content: flex-end;
+                    font-size: 15px;
+                    padding: 3px;
+                    color: #0071c2;
+                }
+
+        .lsFlightOptions{
+            padding: 10px;
+        }
+
+        label{
+            font-size: 14px;
+
+            
+        @include small{
+            font-size: 12px;
+            }
+        }
+
+        input{
+            height: 30px;
+            padding: 5px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .lsFlightOptionItem{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 13px;
+
+            @include small{
+                font-size: 12px;
+                }
+
+            .lsFlightOptionInput{
+                width: 50px;
+
+                &::placeholder{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .buttonSearch{
+        padding: 10px;
+        background-color: #0071c2;
+        color: white;
+        border: none;
+        width: 100%;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}
+    
+    .listFlightResult{
+        flex: 5;
+    }
+}
+}

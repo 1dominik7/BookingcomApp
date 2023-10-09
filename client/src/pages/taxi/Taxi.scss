@@ -1,0 +1,545 @@
+@import '../../App.scss';
+
+.taxiContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0 50px 0;
+
+    @include medium{
+        margin-top: 0px;
+    }
+
+    .taxiWrapper{
+        width: 100%;
+        max-width: 1124px;
+        display: flex;
+        gap: 30px;
+
+        @include large{
+            width: 100%;
+            max-width: 794px;
+        }
+
+        @include medium{
+            max-width: 570px;
+            font-size: 13px;
+            gap: 15px;
+        }
+
+        @include small{
+            width: 100%;
+            max-width: 350px;
+            flex-direction: column;
+         }
+
+        .taxiLeftSide{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 20px;
+            position: relative;
+            
+                span{
+                 font-size: 12px;
+                }
+
+                h1{
+                 font-size: 20px;
+                }
+
+                h2{
+                 font-size: 14px;
+                }
+
+            .taxiLeftSideJourney{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+                border: 1px rgb(238, 236, 236) solid;
+                border-radius: 5px;
+
+                .taxiLeftSideJourneyTop{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .taxiListSearcContainerInfo{
+                        height: 120px;
+                        position: relative;
+                        display: flex;
+                        gap: 20px;
+                        align-items: center;
+
+                        @include small{
+                            height: 60px;
+                         }
+                        
+
+                        .taxiListSearcContainerInfoCircle{
+                            color: white;
+                            border: 1px solid black;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .taxiListSearcContainerDuration{
+                        margin-left: 40px;
+                    }
+
+                    .taxiListSearcContainerLine{
+                        position: absolute;
+                        top: 80px;
+                        left: 8px;
+                        width: 1px;
+                        height: 135px;
+                        background-color: black;
+
+                        @include small{
+                            top: 45px;
+                            height: 85px;
+                         }
+
+                        
+                    @include medium{
+                        left: 7px;
+                    }
+                    }
+                }
+
+                .taxiLeftSideJourneyBottom{
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+
+                    .taxiLeftSideJourneyBottomDesc{
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .taxiLeftSideIcon{
+                        font-size: 22px;
+                        color: rgb(58, 57, 57);
+                    }
+
+                    span{
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .taxiLeftSidePickUp{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+                border: 1px rgb(238, 236, 236) solid;
+                border-radius: 5px;
+
+                .taxiLeftSidePickUpInfo{
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+
+                    .taxiLeftSideIcon{
+                        font-size: 22px;
+                        color: rgb(58, 57, 57);
+                    }
+                    
+                    .taxiLeftSidePickUpInfoDesc{
+                        display: flex;
+                        flex-direction: column;
+
+                        span{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .taxiLeftSidePolicies{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+                border: 1px rgb(238, 236, 236) solid;
+                border-radius: 5px;
+
+                .taxiLeftSidePoliciesInfo{
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+
+                    .taxiLeftSideIcon{
+                        font-size: 22px;
+                        color: rgb(58, 57, 57);
+                    }
+
+                    .taxiLeftSidePoliciesInfoDesc{
+                        display: flex;
+                        flex-direction: column;
+
+                        span{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .taxiLeftSidePrice{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+                border: 1px rgb(238, 236, 236) solid;
+                border-radius: 5px;
+                font-size: 16px;
+                
+                span{
+                    font-size: 16px;
+                }
+
+                h2{
+                    font-size: 16px;
+                }
+
+                .taxiLeftSidePriceInfo{
+                    display: flex;
+                    justify-content: space-between;
+
+                    .taxiLeftSidePriceInfoLeft{
+                        display: flex;
+                        gap: 5px;
+                        align-items: center;
+
+                        .taxiLeftSideIcon{
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                hr{
+                    height: 1px;
+                    color: rgb(243, 240, 240)
+                }
+
+                .taxiLeftSidePriceTotal{
+                    display: flex;
+                    justify-content: space-between;
+
+                    .taxiLeftSidePriceTotalLeft{
+                        display: flex;
+                        flex-direction: column;
+
+                        span{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .taxiRightSide{
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+            gap: 20px;
+
+            span{
+                font-size: 15px;
+
+                @include medium{
+                    font-size: 13px;
+                }
+               }
+
+               h1{
+                font-size: 20px;
+               }
+
+               h2{
+                font-size: 16px;
+               }
+
+            .taxiRightSideTop{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+                border: 1px rgb(238, 236, 236) solid;
+                border-radius: 5px;
+
+                .taxiRightSideTopDesc{
+                    h1{
+                        @include medium{
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                .taxiRightSideTopInputs{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .taxiRightSideTopInput{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        .taxiRightSideTopInputText{
+                            width: 50%;
+                            height: 35px;
+
+                              @include medium{
+                                width: 70%;
+                            }
+                        }
+
+                        .taxiRightSideTopInputC{
+                            position: relative;
+                            display: flex;
+                            gap: 5px;
+                            width: 50%;
+                            height: 35px;
+
+                            @include medium{
+                                width: 70%;
+                            }
+
+                            .taxiRightSideTopInputCDisplay{
+                                width: 20%;
+                                height: 35px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-around;
+                                border: 1px solid rgb(145, 143, 143);
+                                cursor: pointer;
+
+                                .flagIcon{
+                                    font-size: 20px;
+
+                                    @include large{
+                                        font-size: 16px;
+                                    }
+                                }
+
+                                .taxiRightSideTopIcon{
+                                    font-size: 22px;
+
+                                     @include large{
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+
+                            .taxiRightSideTopInputCOptions{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 5px;
+                                position: absolute;
+                                top: 35px;
+                                border: 1px solid rgb(160, 148, 148);
+                                border-radius: 5px;
+                                background-color: rgb(252, 249, 249);
+                                cursor: pointer;
+                                z-index: 999;
+                                overflow-y: scroll;
+
+                                .taxiRightSideTopInputCOption{
+                                    padding: 3px;
+
+                                    &:hover{
+                                        background-color: rgb(214, 208, 208);
+                                    }
+                                }
+                            }
+                          
+                            .taxiRightSideTopInputNumber{
+                                width: 80%;
+                                display: flex;
+                                align-items: center;
+                                border: 1px solid rgb(160, 148, 148);
+                                border-radius: 5px;
+
+                                .taxiRightSideTopInputNumberL{
+                                    padding: 5px 10px;
+                                    border-right: 1px solid rgb(238, 236, 236);
+                                    
+                                    @include large{
+                                        width: 30%;
+                                    }
+                                }
+
+                                .taxiRightSideTopInputNumberR{
+                                    border: none;
+                                    outline: none;
+                                    font-size: 15px;
+
+                                    @include large{
+                                        width: 70%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .taxiRightSideBottom{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+                border: 1px rgb(238, 236, 236) solid;
+                border-radius: 5px;
+
+                hr{
+                    height: 1px;
+                    color: rgb(250, 255, 245);
+                }
+
+                .taxiRightSideBottomCard{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    h1{
+                        @include medium{
+                            font-size: 18px;
+                        }
+                    }
+
+                    .taxiRightSideBottomCardC{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        width: 50%;
+
+                        .taxiRightSideBottomCardCI{
+                            height: 35px;
+                        }
+
+                        .taxiRightSideBottomCardCN{
+                            display: flex;
+                            align-items: center;
+                            gap: 15px;
+                            border: 1px solid rgb(160, 148, 148);
+                            border-radius: 5px;
+                            
+                            .taxiRightSideBottomCardIcon{
+                                font-size: 20px;
+                                margin-left: 10px;
+                            }
+
+                            .taxiRightSideBottomCardCI{
+                                width: 100%;
+                                outline: none;
+                                border: none;
+                            }
+                        }
+                    }
+
+                    .taxiRightSideBottomCardCR{
+                        display: flex;
+                        gap: 5px;
+                        margin-bottom: 10px;
+
+                        @include small{
+                            width: 100%;
+                        }
+
+                        .taxiRightSideBottomCardCL{
+                            display: flex;
+                            flex-direction: column;
+
+                            @include small{
+                                width: 100%;
+                            }
+                            
+                            .taxiRightSideBottomCardCI{
+                                height: 35px;
+
+                                @include small{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .taxiRightSideBottomInfo{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    cursor: pointer;
+
+                    .taxiRightSideBottomInfoBefore{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        
+                        h1{
+                            @include medium{
+                                font-size: 18px;
+                            }
+                        }
+
+                    .taxiRightSideBottomCardIcon{
+                        margin-right: 10px;
+                        font-size: 22px;
+                    }
+                }
+                }
+            }
+
+                .taxiRightSideBottomInfo2{
+
+                    @include small{
+                        padding: 0 10px;
+                    }
+                    
+                    span{
+                        margin-left: 20px;
+                    }
+                }
+
+                .taxiRightSideBottomInfo3{
+
+                    span{
+                        margin-left: 20px;
+                        color: #0071c2;
+                    }
+                }
+
+                .taxiRightSideBottomButtonC{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .taxiRightSideBottomButton{
+                        width: 130px;
+                        height: 60px;
+                        font-size: 15px;
+                        background-color: #0071c2;
+                        color: white;
+                        border-radius: 5px;
+                        cursor: pointer;
+
+                        @include large{
+                            margin-right: 10px;
+                        }
+
+                        @include medium{
+                            width: 110px;
+                            height: 50px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+        }
+    }
+}

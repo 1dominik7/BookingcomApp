@@ -1,0 +1,59 @@
+@import '../../App.scss';
+
+*{
+    box-sizing: border-box;
+}
+
+.carHomeContainer{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    .carHomeDesc{
+
+    .carHomeTitle{
+    width: 1024px;
+    font-size: 26px;
+
+    @include medium{
+        width: 100%;
+        max-width: 570px;
+        font-size: 18px;
+    }
+
+    @include small{
+        width: 100%;
+        max-width: 350px;
+        font-size: 16px;
+     }
+    }
+
+    @include large{
+        width: 100%;
+        max-width: 794px;
+    }
+
+    @include medium{
+        width: 100%;
+        max-width: 570px;
+    }
+
+    @include small{
+        width: 100%;
+        max-width: 350px;
+     }
+    }
+    
+    @include small{
+        gap: 20px;
+     }
+
+    .carInfoElement{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(242, 244, 244);
+    }
+}

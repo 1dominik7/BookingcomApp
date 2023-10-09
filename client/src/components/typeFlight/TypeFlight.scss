@@ -1,0 +1,166 @@
+@import '../../App.scss';
+
+.flightTypeC{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(209, 206, 206);
+    font-weight: 600;
+    font-size: 14px;
+    gap: 10px;
+
+    @include large{
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    @include medium{
+        gap: 5px;
+        font-size: 11px;
+    }
+
+    @include small{
+        flex-direction: column;
+        gap: 5px;
+        justify-content: normal;
+        position: relative;
+        padding: 10px 0;
+     }
+
+    .img{
+     width: 250px;
+     height: 90%;   
+     object-fit:cover;
+
+     @include large{
+        width: 150px;
+        height: 100px;
+    }
+
+    @include medium{
+        width: 100px;
+        height: 80px;
+    }
+
+     @include small{
+       position: absolute;
+       top: 0;
+       right: 0;
+     }
+    }
+
+    .info{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 3px;
+ 
+        @include small{
+            width: 100%;
+            height: auto;
+            justify-content:none;
+            margin-left: 10px;
+         }
+
+         .city{
+            @include small{
+                width: 60%;
+             }
+         }
+
+        .flightCT{
+            display: flex;
+            gap: 5px;
+        }
+
+        >div{
+            font-weight: 400;
+        }
+    }
+
+    .limitPeople{
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        @include medium{
+            width: 40%;
+          }
+
+        @include small{
+           width: 100%;
+           height: auto;
+         }
+
+        .limitPeopleC{
+            display: flex;
+            height: 100%;
+            width: 85%;
+            font-size: 13px;
+            
+            @include medium{
+                font-size: 11px;
+            }
+         
+            .limitPeopleCItemT{
+                height: 100%;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+
+                @include small{
+                    height: 100%;
+                }
+
+                .title{
+                    margin-bottom: 5px;
+                }
+            }
+
+            .limitPeopleCItemN{
+                height: 100%;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                @include small{
+                    height: 100%;
+                }
+
+                .title{
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    
+
+    .price{
+        height: 100%;
+        width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 5px;
+
+        @include small{
+           width: 30%;
+        }
+
+        span{
+            margin-bottom: 5px;
+        }
+    }
+    }
+}

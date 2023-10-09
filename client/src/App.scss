@@ -1,0 +1,23 @@
+.app{
+    position: relative;
+
+  
+}
+
+@mixin large {
+    @media(max-width: 1148px){
+      @content
+    }
+   };
+
+   @mixin medium {
+    @media(max-width: 809px){
+      @content
+    }
+   };
+
+   @mixin small {
+    @media(max-width: 600px){
+      @content
+    }
+   };

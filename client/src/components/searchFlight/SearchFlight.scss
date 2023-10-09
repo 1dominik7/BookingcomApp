@@ -1,0 +1,166 @@
+@import '../../App.scss';
+
+.searchFlight{
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .searchDetails{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 65%;
+
+        @include medium{
+            width: 75%;
+        }
+
+        @include small{
+            width: 80%;
+            }
+
+        .searchFlightDetails{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .siImg{
+                width: 100px;
+                height: 100px;
+                object-fit: scale-down;
+
+                @include medium{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+            .searchTime{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h1{
+                    font-weight: 600;
+                    font-size: 18px;
+
+                    @include medium{
+                        font-size: 15px;
+                    }
+                }
+
+                span{
+                    font-size: 14px;
+                    font-weight: 300;
+
+                    @include medium{
+                        font-size: 11px;
+                    }
+
+                    .searchCity{
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            .searchDirect{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+
+                hr{
+                    width: 150px;
+
+                    @include large{
+                        width: 80px;
+                }
+
+                @include medium{
+                    width: 60px;
+            }
+            }
+
+                span{
+                    font-size: 13px;
+
+                    @include medium{
+                        font-size: 11px;
+                    }    
+                }
+            }
+        }
+    }
+
+    .searchDetails2{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 15px;
+        width: 35%;
+        text-align: end;
+
+        @include medium{
+            width: 25%;
+            gap: 10px;
+        }
+
+        @include small{
+            width: 20%;
+            }
+
+        h2{
+            @include medium{
+               font-size: 16px;
+            }
+        }
+
+        .package{
+            width: 30px;
+            height: 30px;
+
+             @include medium{
+                width: 20px;
+                height: 20px;
+    }
+        }
+
+        span{
+            font-size: 15px;
+            font-weight: 300;
+
+             @include medium{
+            font-size: 11px;
+    }
+        }
+
+        button{
+            height: 40px;
+            width: 220px;
+            padding: 20px;
+            margin: auto 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            color: #0071c2;
+            border: 2px solid #0071c2;
+            border-radius: 10px;
+            background-color: white;
+            cursor: pointer;
+
+            @include large{
+                width: 160px;
+            }
+
+            @include medium{
+                width: 80px;
+                padding: 5px;
+                font-size: 14px;
+            }
+        }
+    }
+}

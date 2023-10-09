@@ -1,0 +1,103 @@
+@import '../../App.scss';
+
+.reserveAttraction{    
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .reserveAttractionContainer{
+        display: flex;
+        background: rgb(255,255,255);
+        background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,113,194,0.6222688904663427) 100%);
+        padding: 20px;
+        position: relative;
+        width: 60%;
+        max-height: 90%;
+        gap: 20px;
+        border-radius: 5px;
+
+        @include medium{
+           width: 90%;
+        }
+
+        .reserveAttractionXmark{
+            position: absolute;
+            top:10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .reserveAttractionDetails{
+            display: flex;
+            gap: 20px;
+
+            .reserveAttractionPhoto{
+              width: 45%;
+              height: 100%;
+              border-radius: 10px;
+
+              @include medium{
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+            }
+            }
+
+            .reserveAttractionDetailsOptions{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            
+            .reserveAttractionTickets{
+                display: flex;
+                flex-direction: column;
+                font-size: 18px;
+                gap: 5px;
+
+                .reserveAttractionTicketsOption{
+                    display: flex;
+                    justify-content: space-between;
+
+                    .reserveAttractionTicketsOptionLeft{
+                        display: flex;
+                        gap: 5px;
+                    }
+                }
+            }
+
+            .reserveAttractionTotal{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .reserveAttractionButton{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+
+                button{
+                    width: 150px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #0071c2;
+                    color: white;
+                    padding: 10px;
+                    border-radius: 5px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    cursor: pointer;
+                }  
+            }
+            }
+        }
+    }
+}

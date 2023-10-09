@@ -1,0 +1,92 @@
+@import '../../App.scss';
+
+.popularCarHireContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h1{
+        @include medium{
+            font-size: 18px;
+        }
+
+        @include small{
+            font-size: 16px;
+          }
+    }
+
+    @include small{
+        width: 100%;
+        max-width: 350px;
+     }
+    
+    .popularCarHireWrapper{
+    width: 100%;
+    height: 150px;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 3;
+    gap: 20px;
+    z-index: 1;
+    border-radius: 10px;
+
+    @include large{
+        width: 100%;
+        max-width: 794px;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    @include medium{
+        width: 100%;
+        max-width: 570px;
+    }
+
+    @include small{
+        width: 100%;
+        max-width: 350px;
+        flex-direction: column;
+     }
+
+    .popularCarHire{
+        display: flex;
+        gap: 10px;
+        flex: 1;
+        cursor: pointer;
+
+        @include medium{
+            gap: 5px;
+        }
+
+        .popularCarHirePhoto{
+            width: 150px;
+            height: 150px;
+
+            @include medium{
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .popularCarHire{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                h2{
+                    @include medium{
+                        font-size: 16px;
+                    }
+
+                }
+                span{
+                    @include medium{
+                        font-size: 13px;
+                    }
+                }
+        }
+    }
+}
+}

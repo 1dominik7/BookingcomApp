@@ -1,0 +1,151 @@
+@import '../../App.scss';
+
+.popularAttractionsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+    border-radius: 15px;
+
+    @include medium{
+        gap: 20px;
+    }
+
+    .AttractiosnAttractionsTitle{
+        @include medium{
+            font-size: 20px;
+        }
+
+        @include small{
+            font-size: 16px;
+         }
+    }
+    
+    .popularAttractionsWrapper{
+    width: 100%;
+    height: 270px;
+    max-width: 1124px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: -1px 1px 14px -3px rgba(66, 68, 90, 1);
+
+    @include medium{
+        width: 100%;
+        max-width: 570px;
+        height: 220px;
+    }
+
+    @include small{
+        width: 100%;    
+        max-width: 350px;
+        height: 500px;
+        flex-direction: column;
+     }
+
+    .popularAttractionsOption{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        gap: 10px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: .4s ease all;  
+            
+            &:hover{
+                transform: scale(1.1);    
+            }
+        }
+
+        .popularAttractionsOptionTitle{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            z-index: 1;
+            color: white;
+        }
+    }
+}
+
+    .popularAttractionsWrapperBottom{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .popularAttractionsWrapperBottomDesc{
+            width: 100%;
+            height: 200px;
+            max-width: 1124px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            z-index: 1;
+            border-radius: 10px;
+            padding: 30px 20px;
+            box-shadow: -1px 1px 14px -3px rgba(66, 68, 90, 1);
+
+            @include medium{
+                width: 100%;
+                max-width: 570px;
+                gap: 10px;
+                padding: 20px 10px;
+            }
+
+            @include small{
+                width: 100%;    
+                max-width: 350px;
+                height: auto;
+                flex-direction: column;
+             }
+
+            .popularAttractionsWrapperBottomDescOption{
+                display: flex;
+                gap: 20px;
+
+                .popularAttractionsIcon{
+                    font-size: 26px;
+                    color: rgb(81, 173, 81);
+                }
+
+                .popularDescDiv{
+                    display: flex;
+                    flex-direction: column;
+
+                    h3{
+                        @include medium{
+                            font-size: 16px;
+                        }
+
+                        @include small{
+                            font-size: 15px;
+                         }
+                    }
+
+                    span{
+                        font-weight: 300;
+
+                        @include medium{
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,151 @@
+@import '../../App.scss';
+
+.searchAttraction{
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 20px;
+    cursor: pointer;
+
+    .searchAttractionItem{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;   
+
+        @include medium{
+           display: flex;
+           flex-direction: column;
+        }
+
+        .searchAttractionPhoto{
+           width: 220px;
+           height: 160px;
+           object-fit: cover;
+           flex: 3;
+
+           @include large{
+            width: 150px;
+            height: 120px;
+
+            @include medium{
+               width: 180px;
+               height: 130px;
+               flex: none;
+            }
+
+            @include small{
+                width: 100%;
+             }
+        }
+        }
+
+        .searchAttractionDetails{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            flex: 5;
+            gap: 5px;
+        
+            .searchAttractionDetailsDescTitle{
+            }
+
+            .searchAttractionDetailsDesc{
+                font-size: 14px;
+            }
+
+            .searchAttractionDetailsTimer{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                .searchAttractionsIcon{
+                    color: rgb(92, 91, 91);
+                    font-size: 20px;
+                }
+            }
+
+            .searchAttractionDetailsRate{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                .searchAttractionsIconStar{
+                    color: #febb02;
+                    font-size: 20px;
+                }
+
+                span{
+                    font-weight: 600;
+                }
+            }
+
+            .searchAttractionDetailsSpan{
+                font-size: 13px;
+                font-weight: 300;
+                margin-left: 20px;
+
+            }
+
+            .searchAttractionDetailsCancellation{
+                display: flex;
+                gap: 10px;
+
+                .searchAttractionsIcon{
+                    font-size: 20px;
+                    color: green;
+                }
+
+                span{
+                    color: green;
+                }
+            }
+        }
+
+        .searchAttractionDetailsPrice{
+            display: flex;
+            flex-direction: column  ;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex: 2;
+            gap: 5px;
+
+            span{
+                font-size: 14px;
+                display: flex;
+                align-items: flex-end;
+                gap: 5px;
+                letter-spacing: 1px;
+            }
+
+            .searchAttractionDetailsPriceButton{
+                width: 170px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #0071c2;
+                border-radius: 10px;
+                padding: 10px;
+                gap: 15px;
+
+                @include large{
+                    width: 150px;
+                   gap: 5px;
+                }
+
+            span{
+                color: #0071c2  
+            }
+
+            .searchAttractionsIcon{
+                color: #0071c2
+            }
+        }
+        }
+
+
+    }
+}

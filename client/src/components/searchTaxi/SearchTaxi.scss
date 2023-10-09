@@ -1,0 +1,92 @@
+@import '../../App.scss';
+
+.searchTaxiContainer{
+    box-shadow: 8px 8px 24px -15px rgba(66, 68, 90, 1);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    @include medium{
+        padding: 10px;
+     }
+
+    .searchTaxiWrapper{
+        display: flex;
+        justify-content: space-between;
+
+        .searchTaxiDetailsContainer{
+            display: flex;
+            gap: 10px;
+
+        img{
+            width: 100px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .searchTaxiDetails{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .searchTaxiDetailsTop{
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+
+                h4{
+                    @include medium{
+                        font-size: 14px;
+                     }
+                }
+            }
+
+            .searchTaxiDetailsMid{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: rgb(37, 37, 37);
+
+                .searchTaxiDetailsInfo{
+                    @include medium{
+                        font-size: 12px;
+                     }
+                }
+            }
+        }
+        }
+
+        .searchTaxiOptions{
+            display: flex;
+            gap:10px;
+            color: rgb(37, 37, 37);
+
+            @include medium{
+                flex-direction: column;
+             }
+
+            .searchTaxiOption{
+                display: flex;
+                gap: 5px;
+
+                .searchTaxiOptionInfo{
+                    font-size: 13px;
+
+                    @include medium{
+                        font-size: 12px;
+                     }
+                    }
+
+                    .searchTaxiOptionIcon{
+                        @include medium{
+                            font-size: 14px;
+                         }
+                    }
+            }
+        }
+    }
+}
+
+.active{
+    outline: 3px #0071c2 solid
+}

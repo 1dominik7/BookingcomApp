@@ -1,0 +1,402 @@
+@import '../../App.scss';
+
+.taxiTransportContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 30px;
+    padding: 10px;
+
+    .taxiTransportWrapper{
+        max-width: 1124px;
+        width: 100%;
+        display: flex;
+        gap: 50px;
+
+        @include large{
+            width: 100%;
+            max-width: 794px;
+        }
+
+        @include medium{
+            width: 100%;
+            max-width: 570px;
+            gap: 30px;
+        }
+
+        @include small{
+            width: 100%;
+            max-width: 350px;
+            flex-direction: column;
+            gap: 50px;
+         }
+
+        .taxiTransportLeftSide{
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            @include medium{
+                gap: 30px;
+            }
+
+            .taxiTransportLeftSideItem{
+                display: flex;
+                align-items: center;
+                gap: 30px;
+
+                .taxiTransportIcon{
+                    padding: 15px;
+                    font-size: 60px;
+                    color: blue;
+                    background-color: #83bae0;
+                    border-radius: 50%;
+
+                    @include medium{
+                        font-size: 50px;
+                    }
+                }
+
+                .taxiTransportLeftSideItemDesc{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    h2{
+                        font-weight: 600;
+
+                        @include medium{
+                            font-size: 16px;
+                        }
+                    }
+
+                    span{
+                        color: rgb(110, 108, 108);
+
+                        @include medium{
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                .fa-person{
+                    width: 100px;
+                }
+
+                .fa-building{
+                    width: 90px;
+                }
+            }
+        }
+
+        .taxiTransportRightSide{
+            flex: 2;
+            position: relative;
+
+            img{
+                width: 100%;
+                height: 100%;
+
+                @include large{
+                    object-fit: contain;
+                    scale: 1.2;
+                }
+
+                @include medium{
+                    scale: 1.3;
+                }
+
+                @include small{
+                    scale: 1;
+                    width: 100%;
+                 }
+            }
+
+            span{
+                width: 140px;
+                position: absolute;
+                top: -20px;
+                left: 0;
+                text-align: center;
+                padding: 10px;
+                font-size: 14px;
+                background-color: rgb(197, 193, 193);
+
+                @include medium{
+                    top: 0px;
+                }
+
+                 @include small{
+                    top: -30px;
+                }
+            }
+        }
+    }
+
+    .taxiTransportTypeWrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(245, 240, 240);
+
+        .taxiTransportTypeWrapperItems{
+            max-width: 1124px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 50px;
+
+            @include large{
+                width: 100%;
+                max-width: 794px;
+                gap: 20px;
+            }
+
+            @include medium{
+                width: 100%;
+                max-width: 570px;
+                gap: 10px;
+            }
+           
+            h2{
+                display: flex;
+                justify-content: center;
+
+                @include medium{
+                    font-size: 16px;
+                }
+            }
+
+            .taxiTransportTypeWrapperItemsOptions{
+                width: 363px;
+                display: flex;
+                justify-content: space-between;
+                background-color: #0071c2;
+                padding: 1px;
+
+                @include medium{
+                    width: 300px;
+                    height: 50px;
+                    font-size: 13px;
+                }
+
+                .taxiTransportTypeWrapperItemsOption{
+                    padding: 10px;
+                    color: #0071c2;
+                    cursor: pointer; 
+                    background-color: white;
+                }
+
+               .active{
+                background-color: #0071c2;
+                color: white;
+               }
+            }
+        }
+
+        .taxiTransportTypeWrapperItemsTypes{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 20px 5px;
+
+            @include medium{
+                gap: 10px;
+            }
+
+            @include small{
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+
+            .taxiTransportTypeWrapperItemsType{
+                width: 49%;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding: 10px;
+                background-color: white;
+                
+                .title{
+                    display: flex;
+                    flex-direction: column;
+
+                    h3{
+                        @include medium{
+                            font-size: 16px;
+                        }
+                    }
+
+                span{
+                    color: rgb(110, 108, 108);
+
+                    @include medium{
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            .options{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .option{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    @include medium{
+                       font-size: 13px;
+                    }
+
+                    .taxiOptionIcon{
+                        font-size: 20px;
+
+                        @include medium{
+                            font-size: 16px;
+                        }
+                    }
+
+                    .green{
+                        color: green;
+                    }
+
+                    .blue{
+                        color: #0071c2;
+                    }
+
+                    .fa-circle-check{
+                        color: white;
+                        background-color: #0071c2;
+                        border-radius: 45%;
+                    }
+
+                    .fa-check{
+                        color: green;
+                    }
+                }
+            }
+
+            button{
+                width: 80px;
+                height: 40px;
+                background-color: #0071c2;
+                color: white;
+                cursor: pointer;
+            }
+            }
+        }
+
+        .taxiTransportTypeWrapperItemsTypesAll{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            @include medium{
+                gap: 0px;
+            }
+
+            .taxiTransportTypeWrapperItemsTypes{
+                margin: 0;
+                padding: 20px 5px;
+            }
+        }
+    }
+
+    .taxiTransportBottomWrapper{
+        max-width: 1124px;
+        width: 100%;
+        display: flex;
+        gap: 50px;
+        outline: 1px solid rgb(223, 221, 221);
+        background-color: rgb(245, 240, 240);
+
+        @include medium{
+            width: 100%;
+            max-width: 570px;
+        }
+
+        @include small{
+            width: 100%;
+            max-width: 350px;
+         }
+
+        .taxiTransportBottomLeftSide{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 2;
+            padding: 15px;  
+
+            h2{
+                @include medium{
+                    font-size: 18px;
+                }
+
+                @include small{
+                    font-size: 16px;
+                 }
+            }
+
+            span{
+                @include medium{
+                    font-size: 13px;
+                }
+
+                @include small{
+                    font-size: 12px;
+                 }
+            }
+        }
+
+        .taxiTransportBottomRightSide{
+            display: flex;
+            flex-direction: column;
+            flex: 5;
+            
+            .taxiTransportBottomRightSideInfo{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px;
+                outline: 1px solid rgb(218, 212, 212);
+                cursor: pointer;
+
+                .taxiTransportBottomRightSideInfoB{
+                    display: flex;
+                    justify-content: space-between;
+
+                    .taxiTransportBottomTitle{
+                        font-size: 18px;
+
+                        @include medium{
+                            font-size: 16px;
+                        }
+
+                        @include small{
+                            font-size: 13px;
+                         }
+                    }
+                }
+
+                .taxiTransportBottomRightSideInfoA{
+                    @include medium{
+                        font-size: 13px;
+                    }
+
+                    @include small{
+                        font-size: 12px;
+                     }
+                }
+            }
+        }
+    }
+}

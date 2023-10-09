@@ -1,0 +1,206 @@
+@import '../../App.scss';
+
+.register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+
+  .rContainer {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include large{
+      width: 40vw;
+  }
+
+    @include medium{
+      width: 50vw;
+  }
+
+  @include small{
+    width: 60vw;
+ }
+  
+    .rRegisterC{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  
+      .rRegister{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .rRegisterError1{
+          font-size: 11px;
+          color: red;
+        }
+
+  .rInput{
+    height: 30px;
+    padding: 10px;
+    }
+
+    .rInputW{
+      font-size: 11px;
+      color: red;
+    }
+
+    .rInputDesc{
+      font-size: 11px;
+    }
+
+    .rInputDescW{
+      font-size: 11px;
+      color: red;
+    }
+  }
+}
+
+.rRegisterButtonC{
+  width: 100%;
+
+  .rButton {  
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #0071c2;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .rButton:disabled{
+    background-color: #0071c28c;
+    cursor: not-allowed;
+  }
+
+  .rRegisterError1{
+    color: red ;
+  }
+  }
+
+  .rRegisterMoreOption{
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .line1{
+      width: 20%;
+      position: absolute;
+      bottom: 10px;
+      right: 5px;
+      border-bottom: 1px solid rgb(189, 186, 186);
+    }
+
+    .line2{
+      width: 20%;
+      position: absolute;
+      bottom: 10px;
+      left: 5px;
+      border-bottom: 1px solid rgb(196, 189, 189);
+    }
+  }
+
+  .rRegisterIcons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+
+    @include small{
+      margin-top: 0px;
+   }
+
+    .rRegisterIcon{
+      width: 80px;
+      height: 80px;
+      padding: 20px;
+      border: 1px solid rgb(226, 222, 222);
+      border-radius: 5px;
+      cursor: pointer;
+    
+      &:hover{
+        border: 1px solid #0071c2;
+      }
+    }
+
+    .gmail{
+      color: #c71610;
+    }
+
+    .facebook{
+      color: #3b5998;
+    }
+
+    .phone{
+      color: rgb(59, 59, 59);
+    }
+  }
+
+  .rRegisterMore{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: #0071c2;
+    cursor: pointer;
+  }
+
+  .rRegisterLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+    
+    .rRegisterLoginNav{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    .rRegisterLoginSpan{
+      color: #0071c2;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .rRegisterLoginIcon{
+      color: #0071c2;
+    }
+  }
+  }
+
+  .rRegisterInfo{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 13px;
+
+    @include small{
+      margin-top: 0;
+   }
+
+    span{
+      color: #0071c2;
+      cursor: pointer;
+    }
+  }
+
+  .rRegisterFooter{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+
+    @include small{
+      margin-top: 0;
+   }
+  }
+}
+}

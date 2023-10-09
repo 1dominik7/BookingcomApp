@@ -1,0 +1,47 @@
+@import '../../App.scss';
+
+*{
+    box-sizing: border-box;
+}
+
+
+.AttractionsHomeContainer{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    @include medium{
+        margin-top: 40px;
+        gap: 20px;
+    }
+
+    .AttractionsHomeDesc{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .AttractionsHomeTitle{
+            width: 1024px;
+            font-size: 26px;
+
+            @include large{
+                width: 100%;
+                max-width: 794px;
+            }
+
+            @include medium{
+                width: 100%;
+                max-width: 570px;
+            }
+            }
+    }
+
+    .AttractionsInfoElement{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(242, 244, 244);
+    }
+}

@@ -1,0 +1,36 @@
+@import '../../App.scss';
+
+.carsBrand{
+    display: flex;
+    flex: 4;
+
+    @include small{
+        flex: none;
+        flex-wrap: wrap;
+        font-size: 12px;
+     }
+
+    .carBrand{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+
+        @include small{
+            flex: none;
+            width: 48%;
+         }
+
+        .carsImg{
+            width: 180px;
+            height: 150px;
+            object-fit: scale-down;
+
+            @include medium{
+                width: 120px;
+                height: 80px;
+            }
+        }
+    }
+
+}

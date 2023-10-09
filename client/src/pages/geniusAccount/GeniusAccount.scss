@@ -1,0 +1,676 @@
+@import '../../App.scss';
+
+.geniusAccountContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .geniusAccountImg{
+        position: absolute;
+        top:0;
+        width: 100%;    
+        height: 400px;
+        z-index: -1;
+
+        @include small{
+            height: 200px;
+         }
+        
+        .geniusImg{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .geniusAccountWrapper{
+        width: 100%;
+        max-width: 1124px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 80px;
+        margin-top: 100px;
+
+        @include large{
+            width: 100%;
+            max-width: 794px;
+        }
+
+        @include medium{
+            width: 100%;
+            max-width: 570px;
+            gap: 40px;
+            font-size: 12px;
+        }
+
+        @include small{
+            width: 100%;
+            max-width: 350px;
+            margin-top: 70px;
+         }
+
+        .geniusAccountDesc{
+            display: flex;
+            flex-direction: column;
+
+            .geniusAccountDescT1{
+                font-size: 24px;
+                font-weight: bold;
+                color: #003580;
+
+                @include small{
+                    font-size: 20px;
+                 }
+            }
+
+            .geniusAccountDescT2{
+                font-size: 64px;
+                font-weight: bold;
+                color: #003580;
+
+                @include small{
+                   font-size: 40px;
+                 }
+            }
+
+            .geniusAccountDescT3{
+                font-size: 14px;
+                font-weight: 600;
+                color: #003580 
+            }
+        }
+
+        .geniusAccountPanel{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgb(218, 214, 214);
+            background-color: white;
+
+            .geniusAccountPanelDesc{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                h2{
+                    @include small{
+                        font-size: 16px;
+                     }
+                }
+                
+                .geniusAccountPanelDescC{
+                    display: flex;
+                    gap: 5px;
+
+                    span{
+                        font-size: 14px;
+
+                        @include small{
+                           font-size: 12px;
+                         }
+                    }
+
+                .accountManagerIconC{
+                    position: relative;
+
+                .accountManagerIcon{
+                    color: #0071c2;
+                }
+
+                .accountManagerIconModal{
+                    position: absolute;
+                    width: 300px;
+                    height: 100px;
+                    top: 100px;
+                    display: none;
+                    font-size: 12px;
+                    z-index: 9999;
+                    border-radius: 5px;
+                    padding: 5px;
+                    background-color: white;
+
+                    @include small{
+                        font-size: 10px;
+                        width: 200px;
+                        height: 200px;
+                     }
+                }  
+                }     
+                
+                .accountManagerIconC:hover 
+                .accountManagerIconModal{
+                    display: block;
+                    top: 30px;
+                    left: -150px;
+
+                    @include small{
+                        left: -180px;
+                     }
+                }             
+            }
+            }
+
+            .geniusAccountPanelIcons{
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+  
+
+                .geniusAccountPanelIconsSide{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+
+                    .user{
+                        width: 25px;
+                        height: 25px;
+                        padding: 10px;
+                        outline: 3px solid rgb(228, 223, 223);
+                        border-radius: 50%;
+                        background-color: #FFFF00;
+                        z-index: 1;
+                    }
+
+                    .lock{
+                        width: 25px;
+                        height: 25px;
+                        padding: 10px;
+                        outline: 3px solid rgb(228, 223, 223);
+                        background-color: rgb(236, 230, 230);
+                        border-radius: 50%;
+                        z-index: 1;
+                    }
+
+                    span{
+                        font-size: 14px;
+                        font-weight: bold;
+
+                        @include small{
+                            font-size: 12px;
+                         }
+                    }
+                }
+
+                .geniusAccountPanelIconsSideLine{
+                    position: absolute;
+                    top: 17px;
+                    left: 4%;
+                    width: 92%;
+                    height: 10px;
+                    background-color: rgb(241, 242, 232);
+                    z-index: 0;
+                }
+            }
+        }
+
+        .geniusAccountDiscount{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            h1{
+                @include small{
+                    font-size: 16px;
+                 }
+            }
+
+            span{
+                font-size: 14px;
+
+                @include small{
+                    font-size: 12px;
+                 }
+            }
+
+
+            .geniusAccountDiscountDesc{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                @include small{
+                    flex-direction: column;
+                 }
+
+                .geniusAccountDiscountDescSide{
+                    width: 49%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 10px;
+                    padding: 20px 10px;
+                    box-shadow: 2px 4px 33px -23px rgba(66, 68, 90, 1);
+
+                    @include small{
+                        width: 100%;
+                     }
+
+                    .geniusAccountDiscountDescSideTop{
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+
+                        .geniusAccountIcon{
+                            font-size: 46px;
+                            color:#0071c2;
+
+                             @include small{
+                                font-size: 30px;
+                            }
+                        }
+
+                        .geniusAccountDiscountDescSideTopC{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+
+                            span{
+                                font-size: 14px;
+
+                                 @include small{
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+
+                    .geniusAccountDiscountDescSideTopLine{
+                        height: 1px;
+                        width: 95%;
+                        margin: 0 auto 25px auto; 
+                        background-color: rgb(190, 186, 186);
+                    }
+
+                    .geniusAccountDiscountDescSideBottom{
+                        display: flex;
+                        gap: 10px;
+
+                        @include large{
+                            gap: 5px;
+                        }
+
+                        .geniusAccountDiscountDescSideBottomC{
+                            position: relative;
+                            padding: 25px;
+                            border: 1px solid rgb(231, 230, 230);
+                            border-radius: 10px;
+
+                            @include large{
+                                padding: 15px;
+                            }
+
+                            @include medium{
+                               padding: 10px;
+                            }
+
+                            .geniusAccountDiscountDescSideBottomCT{
+                                position: absolute;
+                                top:-10px;
+                                left: 45px;
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+                                padding: 2px 9px;
+                                border: 1px solid rgb(224, 220, 220);
+                                border-radius: 15px;
+                                font-size: 14px;
+
+                                @include large{
+                                    left: 22px;
+                                    font-size: 12px;
+                                }
+
+                                
+                                @include medium{
+                                    top: -12px;
+                                    left: 4px;
+                                    font-size: 12px;
+                                }
+
+                                @include small{
+                                    left: 16px;
+                                 }
+                            }
+
+                            .currentGeniusLvl{
+                                background-color: #e1f010;
+                                border: none;
+                            }
+
+                            .geniusAccountDiscountDescSideBottomCB{
+                                
+                                span{
+                                    font-size: 12px;
+
+                                    @include medium{
+                                        font-size: 11px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .currentLvl{
+                            border: 2px solid #e1f010;;
+                        }
+                    }
+                }
+
+                .geniusAccountDiscountDescSideR{
+                    width: 49%;
+                    display: flex;  
+
+                    @include small{
+                        width: 100%;
+                     }
+
+                    span{
+                        font-size: 12px;
+                        color: rgb(82, 78, 78);
+                        
+                        @include medium{
+                            font-size: 10px;
+                        }
+                    }
+
+                        .geniusAccountDiscountDescSideRightL{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+
+                            .geniusAccountDiscountDescSideRightC{
+                                height: 50%;
+                                display: flex;
+                                padding: 20px;
+                                border-radius: 10px;
+                                box-shadow: 2px 4px 33px -23px rgba(66, 68, 90, 1);
+
+                                @include medium{
+                                    padding: 10px 5px;
+                                }
+
+                                .geniusAccountDiscountDescSideRightCT{
+                                    width: 50%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    gap:10px;
+
+                                    .geniusAccountIcon{
+                                        font-size: 56px;
+                                        color: gray;
+
+                                        @include medium{
+                                            font-size: 30px;
+                                        }
+                                    }
+
+                                    .hourGlass{
+                                        color:#003580;
+                                    }
+
+                                    .geniusAccountDiscountDescSideRightCTD{
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 5px;
+
+                                        .geniusAccountIcon{
+                                            font-size: 13px;
+
+                                            @include medium{
+                                                font-size: 11px;
+                                         }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+
+        .geniusAccountSaving{
+            display: flex;
+            align-items: center;
+
+            @include small{
+                flex-direction: column;
+             }
+
+            .geniusAccountSavingL{
+                display: flex;
+                flex-direction: column;
+                gap:25px;
+
+                h1{
+                    @include small{
+                        font-size: 16px;
+                     } 
+                }
+            }
+
+            .geniusAccountSavingR{
+
+                img{
+            @include small{
+                width: 100%;
+             }
+             }
+             }
+        }
+
+        .geniusAccountDiscover{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            h1{
+                @include small{
+                    font-size: 16px;
+                 }
+            }
+
+            .geniusAccountDiscoverOptions{
+                display: flex;
+                justify-content: space-between;
+
+                .geniusAccountDiscoverOptionsC{
+                    width: 32%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    padding: 15px;
+                    border: solid 1px rgb(233, 229, 229);
+                    border-radius: 10px;
+
+                    h3{
+                        color: #003580;
+                    }
+
+                    .geniusAccountDiscoverOptionsLine{
+                        width: 90%;
+                        height: 1px;
+                        background-color: lightgray;
+                    }
+
+                    .geniusAccountDiscoverOptionsCC{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        .geniusAccountDiscoverOptionsCDsc{
+                            display: flex;
+                            gap: 10px;
+                            align-items: center;
+                            justify-content: center;
+
+                            span{
+                                font-size: 14px;
+                                font-weight: bold;
+
+                                @include small{
+                                    font-size: 12px;
+                                 }
+                            }
+
+                            .geniusAccountIcon{
+                                font-size: 18px;
+
+                                @include small{
+                                    font-size: 16px;
+                                 }
+                            }
+                         
+                            .discount{
+                                border: solid 1px black;
+                                border-radius: 50%;
+                                padding: 4px 5px;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+            }
+            }
+        }
+
+        .geniusBookingCom{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            h1{
+                @include small{
+                    font-size: 16px;
+                 }
+            }
+
+            .geniusBookingComC{
+                display: flex;
+                justify-content: space-between;
+
+                .geniusBookingComCOption{
+                    width: 32%;
+                    display: flex;
+                    gap: 10px;
+
+                    .geniusBookingComCOptionLine{
+                        height: 100%;
+                        width: 7px;
+                        background-color: #003580;
+                    }
+
+                    .geniusBookingComCOptionDesc{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        h3{
+                            color:#003580;
+                        }
+
+                        span{
+                            font-size: 14px;
+
+                            @include small{
+                                font-size: 12px;
+                             }
+                        }
+
+                    }
+                }
+
+            }
+        }
+
+        .geniusFAQ{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            h1{
+                 @include small{
+                font-size: 16px;
+             }
+            }
+
+            .geniusFAQC{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                border: 1px solid rgb(223, 219, 219);
+                border-radius: 10px;;
+
+                .geniusFAQCOpitons{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    padding: 15px;
+                    cursor: pointer;
+
+                    .geniusFAQCOption{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .geniusAccountIcon{
+                            margin-right: 10px;
+                        }
+                    }
+                }
+
+                .geniusFAQCLine{
+                    height: 1px;
+                    width: 95%;
+                    background-color: rgb(224, 224, 224);
+                }
+            }
+        }
+        
+        .geniusInfo{
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            @include small{
+                height: 100px;
+            }
+
+            h1{
+                @include small{
+                    font-size: 16px;
+                 }
+            }
+
+            .geniusInfoC{
+                display: flex;
+                gap: 10px;
+
+                .geniusInfoCButton{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 30px;
+                    padding: 10px;
+                    border: 1px solid #0071c2;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    color: #0071c2;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: #ebf0f5;
+                    }
+                }
+            }
+        }
+    }
+}

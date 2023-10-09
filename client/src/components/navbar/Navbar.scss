@@ -1,0 +1,475 @@
+@import '../../App.scss';
+
+.navbar{
+    height: 220px;
+    background-color: #003580;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+
+    @include medium{
+        height: 150px;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+.navContainer{
+    width: 100%;
+    max-width: 1124px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    @include large{
+        max-width: 794px;
+    }
+
+    @include medium{
+        width: 100%;
+        max-width: 570px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    @include small{
+        width: 100%;
+        max-width: 350px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+.logo{
+    font-weight: 600;
+    align-items: flex-start;
+}
+
+.navUserPanel{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include small{
+        width: 100%;
+        max-width: 350px;
+        gap: 0;
+    }
+}
+
+.navItems{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    @include medium{
+    gap: 5px;
+    }
+
+    @include small{
+        justify-content: center;
+    }
+
+    .navUPItem{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;  
+        padding: 10px;
+        cursor: pointer;  
+
+        &:hover{
+            background-color: #1851a0;
+        }
+
+        .navUPIcon{
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .currency{
+        position: relative;
+        width: 45px;
+        height: 45px;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+
+        @include medium{
+            width: 30px;
+            height: 30px;
+        }
+    
+        .currencyDisplay{
+            visibility: hidden;
+            position: absolute;
+            width: 150px;
+            padding: 5px;
+            font-size: 13px;
+            border-radius: 5px;
+            background-color: rgb(31, 30, 30);                    
+
+            .currencyDisplayCD{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 990;
+                color: white;
+            }
+        }
+
+        &:hover .currencyDisplay{
+            animation: display .5s linear .5s forwards;
+            top: 55px;  
+        }
+    }
+
+    .language{
+        width: 45px;
+        height: 45px;
+        position: relative;
+        display: flex;
+        padding: 10px;
+        font-size: 30px;
+
+        @include medium{
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+        }
+
+        .languageDisplay{
+            visibility: hidden;
+            width: 150px;
+            position: absolute;
+            top: 55px;
+            padding: 5px;
+            font-size: 13px;
+            border-radius: 5px;
+            background-color: rgb(31, 30, 30);
+
+            .languageDisplayLD{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 999;
+                color: white;
+            }
+        }
+
+        &:hover .languageDisplay{
+            animation: display .5s linear .5s forwards;
+            top: 55px;  
+    }
+}
+
+    .navIcon{
+        font-size: 26px;
+        padding: 10px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: #1851a0;
+        }
+
+        @include medium{
+            width: 20px;
+            height: 20px;
+            padding: 5px;
+        }
+    }
+
+    .navDesc{
+        font-size: 18px;
+        padding: 10px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: #1851a0;
+        }
+
+        @include medium{
+            padding: 5px;
+            font-size: 11px;
+        }
+    }
+
+    .navButtonC{
+        display: flex;
+        gap: 10px;
+
+    .navButton{
+        font-size: 16px;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        color: #003580;
+
+        @include medium{
+            font-size: 13px;
+            padding: 5px 5px;
+        }
+    }
+    }
+}
+}
+
+.navList{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    box-sizing: border-box;
+
+    @include large{
+        gap: 20px;
+        font-size: 18px;
+    }
+
+    @include medium{
+        gap: 10px;
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+
+    .navListItem{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+        padding: 11px;
+
+        @include small{
+            padding: 11px 20px;
+        }
+
+        &:hover{
+            background-color: #1851a0;
+            border-radius: 20px;
+        }
+
+        span{
+            @include small{
+                display: none;
+            }
+        }
+    }
+
+    #active{
+        background-color: #1851a0;
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 20px;
+
+        @include small{
+            padding: 11px 20px;
+        }
+    }
+
+}
+}
+
+.navbarUser{
+    height: 80px;
+    background-color: #003580;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+
+    @include medium{
+        justify-content: space-around;
+    }
+
+    .navContainer{
+        width: 100%;
+        max-width: 1124px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0px;
+
+        @include large{
+            max-width: 794px;
+        }
+    
+        @include medium{
+            width: 100%;
+            max-width: 570px;
+        }
+
+        @include small{
+            width: 100%;
+            max-width: 350px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    .logo{
+        font-weight: 600;
+
+        @include medium{
+            font-size: 14px;
+        }
+    }
+    
+    .navUserPanel{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include small{
+            width: 100%;
+            max-width: 350px;
+            gap: 0;
+        }
+    }
+    
+    .navItems{
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+
+        @include medium{
+            gap: 5px;
+            }
+        
+            @include small{
+                justify-content: center;
+            }
+
+        .navUPItem{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;  
+            padding: 10px;
+            cursor: pointer;  
+
+            &:hover{
+                background-color: #1851a0;
+            }
+
+            .navUPIcon{
+                width: 25px;
+                height: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .currency{
+            position: relative;
+            width: 45px;
+            height: 45px;   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+        
+            .currencyDisplay{
+                visibility: hidden;
+                position: absolute;
+                width: 150px;
+                padding: 5px;
+                font-size: 13px;
+                border-radius: 5px;
+                background-color: rgb(31, 30, 30);                    
+
+                .currencyDisplayCD{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 990;
+                    color: white;
+                }
+            }
+
+            &:hover .currencyDisplay{
+                animation: display .5s linear .5s forwards;
+                top: 55px;  
+            }
+        }
+    
+        .language{
+            width: 45px;
+            height: 45px;
+            position: relative;
+            display: flex;
+            padding: 10px;
+            font-size: 30px;
+    
+            .languageDisplay{
+                visibility: hidden;
+                width: 150px;
+                position: absolute;
+                top: 55px;
+                padding: 5px;
+                font-size: 13px;
+                border-radius: 5px;
+                background-color: rgb(31, 30, 30);
+    
+                .languageDisplayLD{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 999;
+                    color: white;
+                }
+            }
+    
+            &:hover .languageDisplay{
+                animation: display .5s linear .5s forwards;
+                top: 55px;  
+        }
+    }
+    
+        .navIcon{
+            font-size: 26px;
+            padding: 10px;
+            cursor: pointer;
+    
+            &:hover{
+                background-color: #1851a0;
+            }
+        }
+    
+        .navDesc{
+            font-size: 18px;
+            padding: 10px;
+            cursor: pointer;
+    
+            &:hover{
+                background-color: #1851a0;
+            }
+        }
+    
+        .navButtonC{
+            display: flex;
+            gap: 10px;
+    
+        .navButton{
+            font-size: 16px;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            color: #003580;
+        }
+        }
+    }
+    }
+}

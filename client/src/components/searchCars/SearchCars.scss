@@ -1,0 +1,191 @@
+@import '../../App.scss';
+
+.searchCar{
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @include medium{
+        font-size: 12px;
+    }
+
+    .searchDetails{
+        .searchCarDetails{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+
+            .searchCarTitle{
+                display: flex;
+                align-items: center;
+                gap: 5px;  
+                width: 230px;
+
+                
+            @include large{
+                width: 160px;
+            }
+
+            @include medium{
+                width: 120px;
+            }
+
+             @include small{
+                width: 140px;
+            }
+            }
+
+            .carImgs{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+            .sCarImg{
+                width: 200px;
+                height: 200px;
+                object-fit: scale-down;
+
+                @include large{
+                    width: 150px;
+                    height: 150px;
+            }
+
+            @include medium{
+                width: 100px;
+                height: 100px;
+            }
+
+            @include small{
+                width: 90px;
+                height: 90px;
+             }
+        }
+
+            .sCarBrandImg{
+                width: 200px;
+                height: 50px;
+                object-fit: scale-down;
+
+                @include large{
+                    width: 150px;
+            }
+
+            @include medium{
+            width: 100px;
+        }
+
+        @include small{
+           width: 90px;
+         }
+            }
+        }
+
+            .searchCarDesc{
+                display: flex;
+                flex-direction: column;  
+                gap: 20px;
+
+                h1{
+                    font-weight: 600;
+                    font-size: 18px;
+
+                    @include small{
+                        font-size: 16px;
+                     }
+                }
+
+                p{
+                    font-size: 14px;
+                    font-weight: 300;
+
+                    @include medium{
+                        font-size: 12px;
+                    }
+                }
+                    .searchCarOptions{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 10px;
+                        
+                        .carIcons{
+                            display: flex;
+                            gap: 10px;
+                            margin-bottom: 5px;
+
+                        }
+                    }
+                        .carDeatilsSpot{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+
+                            .carAirport{
+                                    color: #0071c2; 
+                            }
+                        }     
+            }
+        }
+    }
+
+    .searchCarDetails2{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 5px;
+     
+        .searchCarDetails2option{
+            display: flex;
+            align-items: center;
+            color: green;
+            gap: 5px;
+        }
+
+        span{
+            font-size: 15px;
+            font-weight: 300;
+
+            @include small{
+                font-size: 12px;
+             }
+        }
+
+        button{
+            height: 40px;
+            width: 220px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            color: white;
+            border: 2px solid #0071c2;
+            border-radius: 5px;
+            background-color: #0071c2;;
+            cursor: pointer;
+
+            &:hover{
+                background-color: blue;
+            }
+
+            @include large{
+                width: 150px;
+                height: 40px;
+                padding: 10px;
+        }
+
+        @include medium{
+           width: 100px;
+           font-size: 12px;
+        }
+
+        @include small{
+            width: 80px;
+         }
+        }
+    }
+}

@@ -1,0 +1,285 @@
+@import '../../App.scss';
+
+.attractionsHeader{
+    background-color: #003580;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .headerContainer.listMode{
+        margin:20px 0px 0px 0px;
+    }
+
+    .headerTitle{
+
+        @include medium{
+            font-size: 26px;
+        }
+    }
+
+    .headerContainer{
+        width: 100%;
+        max-width: 824px;
+        margin: 20px 0px 100px 0px;
+
+        @include large{
+            width: 100%;
+            max-width: 794px;
+        }
+
+        @include medium{
+            width: 100%;
+            max-width: 570px;
+        }
+
+        @include small{
+            width: 100%;
+            max-width: 350px;
+            margin: 20px 0px 130px 0px;
+         }
+
+        .headerBtn{
+            background-color: #0071c2;
+            color: white;
+            font-weight: 500;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+
+            @include small{
+                margin-bottom: 20px;
+             }
+        }
+
+        .headerTitle{
+            @include small{
+                font-size: 16px;
+             }
+        }
+    
+    .headerDesc{
+        margin: 20px 0px;
+
+        @include small{
+            font-size: 12px;
+         }
+    }
+
+    .headerAttractionsSearch{
+        height: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 2px;
+        position: absolute;
+        bottom: -25px;
+        max-width: 824px;
+        background-color: #febb02;
+        gap: 1px;
+        padding: 5px;
+
+        @include large{
+            width: 100%;
+            max-width: 794px;
+        }
+
+        @include medium{
+            width: 100%;
+            max-width: 570px;
+            font-size: 13px;
+        }
+
+        @include small{
+            height: auto;
+            width: 100%;
+            bottom: -30px;
+            max-width: 350px;
+            flex-direction: column;
+         }
+
+        .headerAttractionsSearchItem{
+            background-color: white;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 2px;
+            flex: 1;
+            gap: 10px;
+            cursor: pointer;
+
+            @include medium{
+                gap: 0px;
+            }
+
+            @include small{
+                height: 25px;
+                width: 100%;
+             }
+
+            .foundAttractions{
+                position: absolute;
+                top: 55px;
+                width: 100%;
+                background-color: white;
+                box-shadow: 2px 5px 24px -11px rgba(66, 68, 90, 1);
+                border-radius: 10px;
+                z-index: 999;
+                overflow-y: scroll;
+                
+                .foundLink{
+                    color: black;
+                    width: 100%;
+                    cursor: pointer;
+
+                    .foundAttraction{
+                        margin: 5px 0;
+                        padding: 5px;
+                        border-bottom: 1px solid rgb(206, 198, 198);
+
+                        .foundtitle>span{
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .bottomText{
+                    display: flex;
+                    justify-content: flex-end;
+                    font-size: 15px;
+                    padding: 3px;
+                    color: #0071c2;
+                }
+
+                @include small{
+                    top: 50px;
+                 }
+            }
+
+            form{
+                width: 100%;
+            }
+
+            .headerAttractionsSearchInput{
+                width: 100%;
+                border: none;
+                outline: none;
+                padding: 12px;
+                border-radius: 10px;
+                font-size: 16px;
+
+                @include medium{
+                    font-size: 13px;
+                }
+
+                &::placeholder{
+                    font-size: 16px;
+
+                    @include medium{
+                        font-size: 13px;
+                    }
+                }
+            }
+        
+        .headerAttractionsIcon{
+            color: rgb(110, 108, 108);
+            font-size: 26px;
+            margin-left: 15px;
+
+            @include medium{
+                font-size: 20px;
+            }
+        }
+    }
+
+    .headerAttractionsSearchDataC{
+        height: 100%;
+        position: relative;
+        border-radius: 2px;
+        padding: 2px;
+        flex: 1;
+        background-color: white;
+        cursor: pointer;
+
+        @include small{
+            width: 100%;    
+            height: 50px;
+         }
+
+    .headerAttractionsSearchData{
+        height: 100%;
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         gap: 30px;
+
+         @include medium{
+            gap: 15px;
+        }
+
+        @include small{
+           height: 50px;
+         }
+
+            .headerAttractionsIcon{
+                font-size: 26px;
+                margin-left: 15px;
+                color: rgb(110, 108, 108);
+
+                @include medium{
+                    font-size: 20px;
+                }
+            }
+
+            .headerAttractionSearchText{
+                color: rgb(110, 108, 108);
+            }
+        }
+
+        .date{
+            position: absolute;
+            top: 60px;
+            z-index: 3; 
+
+            @include medium{
+                top: 20px;
+                left: -30px;
+                scale: 0.8;
+            }
+
+            @include small{
+                top: 15px;
+             }
+        }
+}
+
+.headerSearchItem{
+    @include small{
+        width: 100%;
+     }    
+
+    .headerBtnSearch{
+        color: white;
+        font-weight: 500;
+        border: none;
+        border-radius: 5px;
+        padding: 15px 10px;
+        font-size: 17px;
+        cursor: pointer;
+        background-color: #0071c2;
+
+        @include medium{
+                padding: 15px 5px;
+                font-size: 14px;
+            }
+
+            @include small{
+                width: 100%;
+             }
+    }
+    }
+}
+}
+}
